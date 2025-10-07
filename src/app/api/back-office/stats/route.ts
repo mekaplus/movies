@@ -1,10 +1,21 @@
-import { NextResponse } from "next/server"
+import { NextRequest, NextResponse } from "next/server"
 import { PrismaClient } from "@prisma/client"
 
 const prisma = new PrismaClient()
 
-export async function GET() {
+export async function GET(request: NextRequest) {
   try {
+    // Check authentication via headers set by middleware
+    const adminId = request.headers.get('x-admin-id')
+    const adminEmail = request.headers.get('x-admin-email')
+
+    if (!adminId || !adminEmail) {
+      return NextResponse.json(
+        { message: "Unauthorized" },
+        { status: 401 }
+      )
+    }
+
     // Get statistics from database
     const [
       totalMovies,

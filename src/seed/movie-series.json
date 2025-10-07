@@ -1,0 +1,222 @@
+[
+  {
+    "title": "The Avengers",
+    "description": "Earth's Mightiest Heroes must come together and learn to fight as a team if they are going to stop the mischievous Loki and his alien army from enslaving humanity.",
+    "year": 2012,
+    "durationMin": 143,
+    "rating": 8.0,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/9BBTo63ANSmhC4e6r62OJFuK2GL.jpg",
+    "viewCount": 89500000
+  },
+  {
+    "title": "Avengers: Endgame",
+    "description": "After the devastating events of Infinity War, the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.",
+    "year": 2019,
+    "durationMin": 181,
+    "rating": 8.4,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/or06FN3Dka5tukK1e9sl16pB3iy.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg",
+    "viewCount": 142000000
+  },
+  {
+    "title": "Iron Man",
+    "description": "After being held captive in an Afghan cave, billionaire engineer Tony Stark creates a unique weaponized suit of armor to fight evil.",
+    "year": 2008,
+    "durationMin": 126,
+    "rating": 7.9,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/78lPtwv72eTNqFW9COBYI0dWDJa.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/9n2tJBplPbgR2ca05hS5CKXwP2c.jpg",
+    "viewCount": 67300000
+  },
+  {
+    "title": "Captain America: The First Avenger",
+    "description": "Steve Rogers, a rejected military soldier, transforms into Captain America after taking a dose of a Super-Soldier serum.",
+    "year": 2011,
+    "durationMin": 124,
+    "rating": 6.9,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/vSNxAJTlD0r02V9sPYpOjqDZXUK.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/zmQpOhHZmEBXk6bqKPJvnWnWU9Y.jpg",
+    "viewCount": 45200000
+  },
+  {
+    "title": "Thor",
+    "description": "The powerful but arrogant god Thor is cast out of Asgard to live amongst humans in Midgard, where he soon becomes one of their finest defenders.",
+    "year": 2011,
+    "durationMin": 115,
+    "rating": 7.0,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/bIuOWTtyFPjsFDevqvF3QrD1aun.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/LvmmDZxkTDqp0DX7mUo621ahdX.jpg",
+    "viewCount": 52800000
+  },
+  {
+    "title": "Spider-Man: No Way Home",
+    "description": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear.",
+    "year": 2021,
+    "durationMin": 148,
+    "rating": 8.2,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/14QbnygCuTO0vl7CAFmPf1fgZfV.jpg",
+    "viewCount": 98700000
+  },
+  {
+    "title": "Black Panther",
+    "description": "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.",
+    "year": 2018,
+    "durationMin": 134,
+    "rating": 7.3,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/uxzzxijgPIY7slzFvMotPv8wjKA.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/b6ZJZHUdMEFECvGiDpJjlfUWela.jpg",
+    "viewCount": 73400000
+  },
+  {
+    "title": "Doctor Strange",
+    "description": "While on a journey of physical and spiritual healing, a brilliant neurosurgeon is drawn into the world of the mystic arts.",
+    "year": 2016,
+    "durationMin": 115,
+    "rating": 7.5,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/uGBVj3bEbCoZbDjjl9wTxcygko1.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/tFI8VLMgSTTU38i8TIsklfqS9Nl.jpg",
+    "viewCount": 58900000
+  },
+  {
+    "title": "Guardians of the Galaxy",
+    "description": "A group of intergalactic criminals must pull together to stop a fanatical warrior with plans to purge the universe.",
+    "year": 2014,
+    "durationMin": 121,
+    "rating": 8.0,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/r7vmZjiyZw9rpJMQJdXpjgiCOk9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/bHarw8xrmQeqf3t8HpuMY7zoK4x.jpg",
+    "viewCount": 64200000
+  },
+  {
+    "title": "Ant-Man",
+    "description": "Armed with a super-suit with the astonishing ability to shrink in scale but increase in strength, cat burglar Scott Lang must embrace his inner hero.",
+    "year": 2015,
+    "durationMin": 117,
+    "rating": 7.3,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/rQRnQfUl3kfp78nCWq8Ks04vnq1.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/kvXLZqY0Ngl1XSw7EaMQO0C1CCj.jpg",
+    "viewCount": 41800000
+  },
+  {
+    "title": "The Dark Knight",
+    "description": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests.",
+    "year": 2008,
+    "durationMin": 152,
+    "rating": 9.0,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/dqK9Hag1054tghRQSqLSfrkvQnA.jpg",
+    "viewCount": 156000000
+  },
+  {
+    "title": "Batman Begins",
+    "description": "After training with his mentor, Batman begins his fight to free crime-ridden Gotham City from corruption.",
+    "year": 2005,
+    "durationMin": 140,
+    "rating": 8.2,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/1P3ZyEq02wcTMd3iE4ebtLvncvH.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/4PiiNGXj1KENTmCBHeN6Mskj2Fq.jpg",
+    "viewCount": 78900000
+  },
+  {
+    "title": "The Dark Knight Rises",
+    "description": "Eight years after the Joker's reign of anarchy, Batman, with the help of the enigmatic Catwoman, is forced from his exile to save Gotham City.",
+    "year": 2012,
+    "durationMin": 164,
+    "rating": 8.4,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/hr0L2aueqlP2BYUblTTjmtn0hw4.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/f6ljQGv7WnJuwBPty017oPWfqjx.jpg",
+    "viewCount": 89100000
+  },
+  {
+    "title": "Man of Steel",
+    "description": "An alien child is evacuated from his dying world and sent to Earth to live among humans. His peace is threatened when other survivors of his home planet invade Earth.",
+    "year": 2013,
+    "durationMin": 143,
+    "rating": 7.1,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7rIPjn5TUK04O25ZkMyHrGNPgLx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/8LCkB3oa7ju5cUXyKtipZXtWm1z.jpg",
+    "viewCount": 62500000
+  },
+  {
+    "title": "Wonder Woman",
+    "description": "When a pilot crashes and tells of conflict in the outside world, Diana, an Amazonian warrior in training, leaves home to fight a war, discovering her full powers.",
+    "year": 2017,
+    "durationMin": 141,
+    "rating": 7.4,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gfJGlDaHuWimErCr5Ql0I8x9QSy.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/6iUNJZymJBMXXriQyFZfLAKnjO6.jpg",
+    "viewCount": 71200000
+  },
+  {
+    "title": "Aquaman",
+    "description": "Arthur Curry, the human-born heir to the underwater kingdom of Atlantis, goes on a quest to prevent a war between the worlds of ocean and land.",
+    "year": 2018,
+    "durationMin": 143,
+    "rating": 6.8,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/5Kg76ldv7VxeX9YlcQXiowHgdX6.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/9QusGjxcYvfPD1THg6oW3RLeNn7.jpg",
+    "viewCount": 53700000
+  },
+  {
+    "title": "Justice League",
+    "description": "Fueled by his restored faith in humanity and inspired by Superman's selfless act, Bruce Wayne enlists the help of his new-found ally, Diana Prince, to face an even greater enemy.",
+    "year": 2017,
+    "durationMin": 120,
+    "rating": 6.1,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/eifGNCSDuxJeS1loAXil5bIGgvC.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/o5T8rZxoWSBMYwjsUFUqTt6uMQB.jpg",
+    "viewCount": 48300000
+  },
+  {
+    "title": "The Matrix",
+    "description": "A computer programmer is led to fight an underground war against powerful computers who have constructed his entire reality with a system called the Matrix.",
+    "year": 1999,
+    "durationMin": 136,
+    "rating": 8.7,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/9n2tJBplPbgR2ca05hS5CKXwP2c.jpg",
+    "viewCount": 87400000
+  },
+  {
+    "title": "The Matrix Reloaded",
+    "description": "Neo and his allies race against time before the machines discover the city of Zion and destroy it, while seeking the help of the Keymaker.",
+    "year": 2003,
+    "durationMin": 138,
+    "rating": 7.2,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ezIurBz2fdUc68d98Fp9dRf5ihv.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/1Rr5SrvHxMXHu5RjKpaMba8VTzi.jpg",
+    "viewCount": 64800000
+  },
+  {
+    "title": "John Wick",
+    "description": "An ex-hit-man comes out of retirement to track down the gangsters that took everything from him. With New York City as his bullet-riddled playground.",
+    "year": 2014,
+    "durationMin": 101,
+    "rating": 7.4,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/fZPSd91yGE9fCcCe6OoQr6E3Bev.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/umC04Cozevu8nn3JTDJ1pc7PVTn.jpg",
+    "viewCount": 92100000
+  }
+]

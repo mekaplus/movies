@@ -6,6 +6,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Plus, Edit, Trash2, Search, LogOut } from "@/components/common/icons"
 import { Movie } from "@/lib/types"
+import { formatViewCount } from "@/lib/utils/format-number"
 
 export default function BackOfficeMovies() {
   const [movies, setMovies] = useState<Movie[]>([])
@@ -13,6 +14,7 @@ export default function BackOfficeMovies() {
   const [loading, setLoading] = useState(true)
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedGenre, setSelectedGenre] = useState<string>("")
+  const [selectedType, setSelectedType] = useState<string>("")
   const [showTopRated, setShowTopRated] = useState(false)
   const [showTrending, setShowTrending] = useState(false)
   const [showFeatured, setShowFeatured] = useState(false)
@@ -22,15 +24,10 @@ export default function BackOfficeMovies() {
   const router = useRouter()
 
   useEffect(() => {
-    const token = localStorage.getItem("admin-token")
-    if (!token) {
-      router.push("/back-office")
-      return
-    }
-
+    // Authentication is handled by middleware
     fetchMovies()
     fetchGenres()
-  }, [router])
+  }, [])
 
   useEffect(() => {
     let filtered = movies
@@ -50,6 +47,11 @@ export default function BackOfficeMovies() {
       )
     }
 
+    // Filter by type
+    if (selectedType) {
+      filtered = filtered.filter(movie => movie.type === selectedType)
+    }
+
     // Filter by top rated (rating >= 8.0)
     if (showTopRated) {
       filtered = filtered.filter(movie => movie.rating >= 8.0)
@@ -67,7 +69,7 @@ export default function BackOfficeMovies() {
 
     setFilteredMovies(filtered)
     setCurrentPage(1) // Reset to first page when filters change
-  }, [searchQuery, selectedGenre, showTopRated, showTrending, showFeatured, movies])
+  }, [searchQuery, selectedGenre, selectedType, showTopRated, showTrending, showFeatured, movies])
 
   // Calculate pagination
   const totalPages = Math.ceil(filteredMovies.length / itemsPerPage)
@@ -251,6 +253,7 @@ export default function BackOfficeMovies() {
 
         {/* Filters and Stats */}
         <div className="mb-6 space-y-4">
+          {/* First Row: Search, Dropdowns, and Stats */}
           <div className="flex flex-col lg:flex-row gap-4 items-start lg:items-center justify-between">
             <div className="flex flex-col sm:flex-row gap-4 flex-1">
               {/* Search */}
@@ -263,6 +266,24 @@ export default function BackOfficeMovies() {
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full sm:w-80 bg-gray-800 border border-gray-700 rounded-lg pl-10 pr-4 py-2.5 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-xflix-red focus:border-transparent"
                 />
+              </div>
+
+              {/* Type Filter */}
+              <div className="relative">
+                <select
+                  value={selectedType}
+                  onChange={(e) => setSelectedType(e.target.value)}
+                  className="w-full sm:w-40 bg-gray-800 border border-gray-700 rounded-lg px-4 py-2.5 text-white focus:outline-none focus:ring-2 focus:ring-xflix-red focus:border-transparent appearance-none cursor-pointer"
+                >
+                  <option value="">All Types</option>
+                  <option value="MOVIE">Movies</option>
+                  <option value="TV_SHOW">TV Shows</option>
+                </select>
+                <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                  <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
               </div>
 
               {/* Genre Filter */}
@@ -285,80 +306,84 @@ export default function BackOfficeMovies() {
                   </svg>
                 </div>
               </div>
-
-              {/* Top Rated Checkbox */}
-              <div className="flex items-center space-x-2 px-4 py-2.5 border border-gray-700 rounded-lg bg-gray-800">
-                <input
-                  type="checkbox"
-                  id="topRated"
-                  checked={showTopRated}
-                  onChange={(e) => setShowTopRated(e.target.checked)}
-                  className="w-4 h-4 rounded border-2 border-gray-600 text-xflix-red focus:ring-xflix-red focus:ring-2 bg-gray-700"
-                />
-                <label htmlFor="topRated" className="text-gray-300 text-sm cursor-pointer flex items-center space-x-1">
-                  <span>⭐</span>
-                  <span>Top Rated (8.0+)</span>
-                </label>
-              </div>
-
-              {/* Trending Checkbox */}
-              <div className="flex items-center space-x-2 px-4 py-2.5 border border-gray-700 rounded-lg bg-gray-800">
-                <input
-                  type="checkbox"
-                  id="trending"
-                  checked={showTrending}
-                  onChange={(e) => setShowTrending(e.target.checked)}
-                  className="w-4 h-4 rounded border-2 border-gray-600 text-xflix-red focus:ring-xflix-red focus:ring-2 bg-gray-700"
-                />
-                <label htmlFor="trending" className="text-gray-300 text-sm cursor-pointer flex items-center space-x-1">
-                  <span>🔥</span>
-                  <span>Trending (100+ views)</span>
-                </label>
-              </div>
-
-              {/* Featured Content Checkbox */}
-              <div className="flex items-center space-x-2 px-4 py-2.5 border border-gray-700 rounded-lg bg-gray-800">
-                <input
-                  type="checkbox"
-                  id="featured"
-                  checked={showFeatured}
-                  onChange={(e) => setShowFeatured(e.target.checked)}
-                  className="w-4 h-4 rounded border-2 border-gray-600 text-xflix-red focus:ring-xflix-red focus:ring-2 bg-gray-700"
-                />
-                <label htmlFor="featured" className="text-gray-300 text-sm cursor-pointer flex items-center space-x-1">
-                  <span>⭐</span>
-                  <span>Featured Content</span>
-                </label>
-              </div>
-
-              {/* Clear Filters */}
-              {(searchQuery || selectedGenre || showTopRated || showTrending || showFeatured) && (
-                <button
-                  onClick={() => {
-                    setSearchQuery("")
-                    setSelectedGenre("")
-                    setShowTopRated(false)
-                    setShowTrending(false)
-                    setShowFeatured(false)
-                  }}
-                  className="px-4 py-2.5 text-gray-400 hover:text-white border border-gray-700 hover:border-gray-600 rounded-lg transition-colors whitespace-nowrap"
-                >
-                  Clear Filters
-                </button>
-              )}
             </div>
 
             {/* Stats */}
             <div className="text-gray-400 text-sm whitespace-nowrap">
               Showing {startIndex + 1}-{Math.min(endIndex, filteredMovies.length)} of {filteredMovies.length} movies
-              {(searchQuery || selectedGenre || showTopRated || showTrending || showFeatured) && (
+              {(searchQuery || selectedGenre || selectedType || showTopRated || showTrending || showFeatured) && (
                 <span className="text-gray-500"> (filtered from {movies.length})</span>
               )}
             </div>
           </div>
 
+          {/* Second Row: Checkboxes and Clear Button */}
+          <div className="flex flex-wrap gap-4 items-center">
+            {/* Top Rated Checkbox */}
+            <div className="flex items-center space-x-2 px-4 py-2.5 border border-gray-700 rounded-lg bg-gray-800">
+              <input
+                type="checkbox"
+                id="topRated"
+                checked={showTopRated}
+                onChange={(e) => setShowTopRated(e.target.checked)}
+                className="w-4 h-4 rounded border-2 border-gray-600 text-xflix-red focus:ring-xflix-red focus:ring-2 bg-gray-700"
+              />
+              <label htmlFor="topRated" className="text-gray-300 text-sm cursor-pointer flex items-center space-x-1">
+                <span>⭐</span>
+                <span>Top Rated (8.0+)</span>
+              </label>
+            </div>
+
+            {/* Trending Checkbox */}
+            <div className="flex items-center space-x-2 px-4 py-2.5 border border-gray-700 rounded-lg bg-gray-800">
+              <input
+                type="checkbox"
+                id="trending"
+                checked={showTrending}
+                onChange={(e) => setShowTrending(e.target.checked)}
+                className="w-4 h-4 rounded border-2 border-gray-600 text-xflix-red focus:ring-xflix-red focus:ring-2 bg-gray-700"
+              />
+              <label htmlFor="trending" className="text-gray-300 text-sm cursor-pointer flex items-center space-x-1">
+                <span>🔥</span>
+                <span>Trending (100+ views)</span>
+              </label>
+            </div>
+
+            {/* Featured Content Checkbox */}
+            <div className="flex items-center space-x-2 px-4 py-2.5 border border-gray-700 rounded-lg bg-gray-800">
+              <input
+                type="checkbox"
+                id="featured"
+                checked={showFeatured}
+                onChange={(e) => setShowFeatured(e.target.checked)}
+                className="w-4 h-4 rounded border-2 border-gray-600 text-xflix-red focus:ring-xflix-red focus:ring-2 bg-gray-700"
+              />
+              <label htmlFor="featured" className="text-gray-300 text-sm cursor-pointer flex items-center space-x-1">
+                <span>⭐</span>
+                <span>Featured Content</span>
+              </label>
+            </div>
+
+            {/* Clear Filters */}
+            {(searchQuery || selectedGenre || selectedType || showTopRated || showTrending || showFeatured) && (
+              <button
+                onClick={() => {
+                  setSearchQuery("")
+                  setSelectedGenre("")
+                  setSelectedType("")
+                  setShowTopRated(false)
+                  setShowTrending(false)
+                  setShowFeatured(false)
+                }}
+                className="px-4 py-2.5 text-gray-400 hover:text-white border border-gray-700 hover:border-gray-600 rounded-lg transition-colors whitespace-nowrap"
+              >
+                Clear Filters
+              </button>
+            )}
+          </div>
+
           {/* Active Filters */}
-          {(searchQuery || selectedGenre || showTopRated || showTrending || showFeatured) && (
+          {(searchQuery || selectedGenre || selectedType || showTopRated || showTrending || showFeatured) && (
             <div className="flex flex-wrap gap-2 items-center">
               <span className="text-gray-400 text-sm">Active filters:</span>
               {searchQuery && (
@@ -367,6 +392,17 @@ export default function BackOfficeMovies() {
                   <button
                     onClick={() => setSearchQuery("")}
                     className="ml-1 hover:text-blue-300"
+                  >
+                    ×
+                  </button>
+                </span>
+              )}
+              {selectedType && (
+                <span className="inline-flex items-center gap-1 px-3 py-1 bg-purple-900/30 text-purple-400 text-sm rounded-full border border-purple-700/30">
+                  Type: {selectedType === 'MOVIE' ? 'Movies' : 'TV Shows'}
+                  <button
+                    onClick={() => setSelectedType("")}
+                    className="ml-1 hover:text-purple-300"
                   >
                     ×
                   </button>
@@ -406,11 +442,11 @@ export default function BackOfficeMovies() {
                 </span>
               )}
               {showFeatured && (
-                <span className="inline-flex items-center gap-1 px-3 py-1 bg-purple-900/30 text-purple-400 text-sm rounded-full border border-purple-700/30">
+                <span className="inline-flex items-center gap-1 px-3 py-1 bg-indigo-900/30 text-indigo-400 text-sm rounded-full border border-indigo-700/30">
                   ⭐ Featured Content
                   <button
                     onClick={() => setShowFeatured(false)}
-                    className="ml-1 hover:text-purple-300"
+                    className="ml-1 hover:text-indigo-300"
                   >
                     ×
                   </button>
@@ -501,7 +537,7 @@ export default function BackOfficeMovies() {
                             : 'bg-gray-900/30 text-gray-400 border border-gray-700/30'
                         }`}>
                           <span>👀</span>
-                          <span>{movie.viewCount || 0}</span>
+                          <span>{formatViewCount(movie.viewCount || 0)}</span>
                         </span>
                         {(movie.viewCount || 0) >= 100 && (
                           <span className="text-xs text-orange-400">🔥</span>

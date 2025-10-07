@@ -6,6 +6,7 @@ import Image from "next/image"
 import { ChevronLeft, ChevronRight, Play, Eye } from "@/components/common/icons"
 import { Movie } from "@/lib/types"
 import { formatYear } from "@/lib/utils"
+import { formatViewCount } from "@/lib/utils/format-number"
 
 interface ContentSectionProps {
   title: string
@@ -153,7 +154,7 @@ export function ContentSection({ title, movies, count, viewAllHref }: ContentSec
                   {movie.viewCount !== undefined && (
                     <div className="content-views">
                       <Eye className="content-eye-icon" />
-                      <span>{movie.viewCount.toLocaleString()}</span>
+                      <span>{formatViewCount(movie.viewCount)}</span>
                     </div>
                   )}
                 </div>

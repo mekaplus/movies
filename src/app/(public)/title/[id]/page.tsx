@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { notFound } from "next/navigation"
-import { Play, Plus, ThumbsUp, ArrowLeft, ChevronDown, Info } from "@/components/common/icons"
+import { Play, ArrowLeft, ChevronDown, Info } from "@/components/common/icons"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 
@@ -10,7 +10,8 @@ import { Button } from "@/components/common/button"
 import { ContentSection } from "@/components/sections/content-section"
 import { Navbar } from "@/components/navbar/navbar"
 import { ViewTracker } from "@/components/movie/view-tracker"
-import { Movie } from "@/lib/types"
+import { SeasonsSection } from "@/components/tv/seasons-section"
+import { Movie, Episode } from "@/lib/types"
 import { formatDuration, formatYear } from "@/lib/utils"
 
 interface MovieDetailPageProps {
@@ -24,6 +25,7 @@ export default function MovieDetailPage({ params }: MovieDetailPageProps) {
   const [movieId, setMovieId] = useState<string>("")
   const [currentStreamUrl, setCurrentStreamUrl] = useState<string>("")
   const [selectedPlayerIndex, setSelectedPlayerIndex] = useState<number>(0)
+  const [currentEpisode, setCurrentEpisode] = useState<Episode | null>(null)
 
   useEffect(() => {
     const getParams = async () => {
@@ -40,8 +42,8 @@ export default function MovieDetailPage({ params }: MovieDetailPageProps) {
       setLoading(true)
       try {
         const [movieResponse, similarResponse] = await Promise.all([
-          fetch(`/api/movies/${movieId}`),
-          fetch(`/api/movies/${movieId}/similar`)
+          fetch(`/api/titles/${movieId}`),
+          fetch(`/api/titles/${movieId}/similar`)
         ])
 
         if (!movieResponse.ok) {
@@ -56,8 +58,18 @@ export default function MovieDetailPage({ params }: MovieDetailPageProps) {
         setSimilarMovies(similarData)
 
         // Set the first streaming URL as default
-        if (movieData.streamingUrls && movieData.streamingUrls.length > 0) {
+        if (movieData.type === 'MOVIE' && movieData.streamingUrls && movieData.streamingUrls.length > 0) {
           setCurrentStreamUrl(movieData.streamingUrls[0].url)
+        } else if (movieData.type === 'TV_SHOW' && movieData.seasons && movieData.seasons.length > 0) {
+          // For TV shows, set the first episode of the first season as default
+          const firstSeason = movieData.seasons[0]
+          if (firstSeason.episodes && firstSeason.episodes.length > 0) {
+            const firstEpisode = firstSeason.episodes[0]
+            setCurrentEpisode(firstEpisode)
+            if (firstEpisode.streamingUrls && firstEpisode.streamingUrls.length > 0) {
+              setCurrentStreamUrl(firstEpisode.streamingUrls[0].url)
+            }
+          }
         }
       } catch (error) {
         console.error('Error fetching movie data:', error)
@@ -74,11 +86,9 @@ export default function MovieDetailPage({ params }: MovieDetailPageProps) {
     return (
       <div className="movie-detail">
         <Navbar />
-        <div className="movie-detail-hero">
-          <div className="movie-detail-content">
-            <div className="content-container">
-              <div className="loading-spinner">Loading...</div>
-            </div>
+        <div className="min-h-screen flex items-center justify-center">
+          <div className="text-center">
+            <div className="loading-spinner text-white text-xl">Loading...</div>
           </div>
         </div>
       </div>
@@ -92,6 +102,14 @@ export default function MovieDetailPage({ params }: MovieDetailPageProps) {
   const directors = movie.credits.filter(credit => credit.role === "DIRECTOR")
   const actors = movie.credits.filter(credit => credit.role === "ACTOR").slice(0, 12)
   const writers = movie.credits.filter(credit => credit.role === "WRITER").slice(0, 3)
+
+  const handleEpisodeSelect = (episode: Episode) => {
+    setCurrentEpisode(episode)
+    setSelectedPlayerIndex(0)
+    if (episode.streamingUrls && episode.streamingUrls.length > 0) {
+      setCurrentStreamUrl(episode.streamingUrls[0].url)
+    }
+  }
 
   return (
     <div className="movie-detail">
@@ -122,7 +140,7 @@ export default function MovieDetailPage({ params }: MovieDetailPageProps) {
             </Link>
           </div>
 
-          {movie?.streamingUrls && movie.streamingUrls.length > 0 && (
+          {currentStreamUrl && (
             <div className="movie-detail-player">
               <iframe
                 src={currentStreamUrl}
@@ -133,7 +151,21 @@ export default function MovieDetailPage({ params }: MovieDetailPageProps) {
             </div>
           )}
 
-          {movie.streamingUrls && movie.streamingUrls.length > 0 && (
+          {movie.trailerUrl && (
+            <div className="movie-detail-play-buttons">
+              <Button
+                className="movie-detail-play-btn"
+                onClick={() => {
+                  window.open(movie.trailerUrl, '_blank', 'noopener,noreferrer')
+                }}
+              >
+                <Play />
+                <span>Watch Trailer</span>
+              </Button>
+            </div>
+          )}
+
+          {movie.type === 'MOVIE' && movie.streamingUrls && movie.streamingUrls.length > 0 && (
             <div className="movie-detail-play-buttons">
               {movie.streamingUrls.map((streamUrl, index) => (
                 <Button
@@ -153,30 +185,66 @@ export default function MovieDetailPage({ params }: MovieDetailPageProps) {
             </div>
           )}
 
+          {movie.type === 'TV_SHOW' && currentEpisode && currentEpisode.streamingUrls && currentEpisode.streamingUrls.length > 0 && (
+            <div className="movie-detail-play-buttons">
+              {currentEpisode.streamingUrls.map((streamUrl, index) => (
+                <Button
+                  key={streamUrl.id}
+                  className={`movie-detail-play-btn ${
+                    selectedPlayerIndex === index ? 'movie-detail-play-btn-selected' : ''
+                  }`}
+                  onClick={() => {
+                    setCurrentStreamUrl(streamUrl.url)
+                    setSelectedPlayerIndex(index)
+                  }}
+                >
+                  <Play />
+                  <span>Player {index + 1}</span>
+                </Button>
+              ))}
+            </div>
+          )}
+
           <div className="movie-detail-main">
             <div className="movie-detail-info">
-              <h1 className="movie-detail-title">{movie.title}</h1>
+              <h1 className="movie-detail-title">
+                {movie.title}
+                {movie.type === 'TV_SHOW' && currentEpisode && movie.seasons && (
+                  <span className="movie-detail-episode-info">
+                    {' '}- S{movie.seasons.find(s => s.id === currentEpisode.seasonId)?.seasonNumber || 1} E{currentEpisode.episodeNumber}: {currentEpisode.title}
+                  </span>
+                )}
+              </h1>
 
               <div className="movie-detail-meta">
                 <div className="movie-detail-rating">
                   <span className="movie-detail-match">98% Match</span>
                 </div>
                 <span className="movie-detail-year">{formatYear(movie.year)}</span>
-                <span className="movie-detail-duration">{formatDuration(movie.durationMin)}</span>
+                {movie.type === 'MOVIE' && (
+                  <span className="movie-detail-duration">{formatDuration(movie.durationMin)}</span>
+                )}
+                {movie.type === 'TV_SHOW' && movie.seasons && (
+                  <span className="movie-detail-duration">
+                    {movie.seasons.length} Season{movie.seasons.length > 1 ? 's' : ''}
+                  </span>
+                )}
                 <span className="movie-detail-quality">4K Ultra HD</span>
                 <span className="movie-detail-audio">5.1</span>
               </div>
 
-              <p className="movie-detail-overview">{movie.overview}</p>
-
-              <div className="movie-detail-actions">
-                <button className="movie-detail-action-btn">
-                  <Plus />
-                </button>
-                <button className="movie-detail-action-btn">
-                  <ThumbsUp />
-                </button>
+              <div className="movie-detail-genres">
+                {movie.genres.map((genre, index) => (
+                  <span key={genre.id}>
+                    <Link href={`/genre/${genre.id}`} className="movie-detail-genre-link">
+                      {genre.name}
+                    </Link>
+                    {index < movie.genres.length - 1 && <span className="movie-detail-genre-separator"> • </span>}
+                  </span>
+                ))}
               </div>
+
+              <p className="movie-detail-overview">{movie.overview}</p>
             </div>
 
             <div className="movie-detail-poster">
@@ -203,22 +271,6 @@ export default function MovieDetailPage({ params }: MovieDetailPageProps) {
           <div className="movie-detail-grid">
             {/* Main Content */}
             <div className="movie-detail-main-content">
-              {/* Genres */}
-              <div className="movie-detail-genres">
-                <h3 className="movie-detail-section-title">Genres</h3>
-                <div className="movie-detail-genre-list">
-                  {movie.genres.map((genre) => (
-                    <Link
-                      key={genre.id}
-                      href={`/genre/${genre.id}`}
-                      className="movie-detail-genre-tag"
-                    >
-                      {genre.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-
               {/* Cast */}
               {actors.length > 0 && (
                 <div className="movie-detail-cast">
@@ -256,25 +308,6 @@ export default function MovieDetailPage({ params }: MovieDetailPageProps) {
 
             {/* Sidebar */}
             <div className="movie-detail-sidebar">
-              {/* Movie Stats */}
-              <div className="movie-detail-stats">
-                <div className="movie-detail-stat">
-                  <span className="movie-detail-stat-label">Rating</span>
-                  <div className="movie-detail-stat-value">
-                    <span className="movie-detail-stat-number">{movie.rating}</span>
-                    <span className="movie-detail-stat-max">/10</span>
-                  </div>
-                </div>
-                <div className="movie-detail-stat">
-                  <span className="movie-detail-stat-label">Release Year</span>
-                  <span className="movie-detail-stat-value">{movie.year}</span>
-                </div>
-                <div className="movie-detail-stat">
-                  <span className="movie-detail-stat-label">Duration</span>
-                  <span className="movie-detail-stat-value">{formatDuration(movie.durationMin)}</span>
-                </div>
-              </div>
-
               {/* Crew */}
               {directors.length > 0 && (
                 <div className="movie-detail-crew">
@@ -311,6 +344,20 @@ export default function MovieDetailPage({ params }: MovieDetailPageProps) {
           </div>
         </div>
       </div>
+
+      {/* Seasons Section for TV Shows */}
+      {movie.type === 'TV_SHOW' && movie.seasons && movie.seasons.length > 0 && (
+        <div className="movie-detail-seasons">
+          <div className="content-container">
+            <SeasonsSection
+              seasons={movie.seasons}
+              onEpisodeSelect={handleEpisodeSelect}
+              currentEpisodeId={currentEpisode?.id}
+              defaultPosterUrl={movie.backdropUrl || movie.posterUrl}
+            />
+          </div>
+        </div>
+      )}
 
       {/* Similar Movies */}
       {similarMovies.length > 0 && (

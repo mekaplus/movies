@@ -5,7 +5,7 @@ import { useSearchParams } from "next/navigation"
 import { Search } from "@/components/common/icons"
 
 import { Navbar } from "@/components/navbar/navbar"
-import { TitleCard } from "@/components/cards/title-card"
+import { MovieGrid } from "@/components/grid/movie-grid"
 import { Movie } from "@/lib/types"
 
 function SearchContent() {
@@ -72,15 +72,11 @@ function SearchContent() {
         )}
 
         {movies.length > 0 && (
-          <div>
+          <div className="content-container">
             <h2 className="text-2xl font-semibold text-white mb-6">
               Search Results for &quot;{query}&quot;
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
-              {movies.map((movie) => (
-                <TitleCard key={movie.id} movie={movie} />
-              ))}
-            </div>
+            <MovieGrid movies={movies} />
           </div>
         )}
 

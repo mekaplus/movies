@@ -1,7 +1,5 @@
 import { Movie, Genre, MediaType } from "@/lib/types"
-import { PrismaClient } from "@prisma/client"
-
-const prisma = new PrismaClient()
+import { prisma } from "@/lib/db"
 
 function transformPrismaMovie(movie: any): Movie {
   return {
@@ -14,12 +12,14 @@ function transformPrismaMovie(movie: any): Movie {
     type: movie.type,
     posterUrl: movie.posterUrl,
     backdropUrl: movie.backdropUrl,
+    trailerUrl: movie.trailerUrl,
     viewCount: movie.viewCount,
     genres: movie.genres.map((mg: any) => mg.genre),
     credits: movie.credits,
     streamingUrls: movie.streamingUrls || [],
     featuredContent: movie.featuredContent,
-    heroSection: movie.heroSection
+    heroSection: movie.heroSection,
+    seasons: movie.seasons || []
   }
 }
 
@@ -54,23 +54,7 @@ export async function getAllMovies(): Promise<Movie[]> {
 export async function getMovieById(id: string): Promise<Movie | null> {
   const movie = await prisma.movie.findUnique({
     where: { id },
-    include: {
-      genres: {
-        include: {
-          genre: true
-        }
-      },
-      credits: {
-        include: {
-          person: true
-        }
-      },
-      streamingUrls: {
-        where: {
-          isActive: true
-        }
-      }
-    }
+    include: includeMovieData
   })
 
   return movie ? transformPrismaMovie(movie) : null
@@ -93,7 +77,26 @@ const includeMovieData = {
     }
   },
   featuredContent: true,
-  heroSection: true
+  heroSection: true,
+  seasons: {
+    include: {
+      episodes: {
+        include: {
+          streamingUrls: {
+            where: {
+              isActive: true
+            }
+          }
+        },
+        orderBy: {
+          episodeNumber: 'asc'
+        }
+      }
+    },
+    orderBy: {
+      seasonNumber: 'asc'
+    }
+  }
 }
 
 export async function getMoviesByGenre(genreId: string): Promise<Movie[]> {

@@ -7,6 +7,7 @@ import { Play, Plus, ThumbsUp, ChevronDown, Eye } from "@/components/common/icon
 import { Button } from "@/components/common/button"
 import { Movie } from "@/lib/types"
 import { formatDuration, formatYear, cn } from "@/lib/utils"
+import { formatViewCount } from "@/lib/utils/format-number"
 
 interface TitleCardProps {
   movie: Movie
@@ -89,7 +90,7 @@ export function TitleCard({ movie, priority = false }: TitleCardProps) {
                   <span>•</span>
                   <div className="flex items-center space-x-1">
                     <Eye className="h-3 w-3" />
-                    <span>{movie.viewCount.toLocaleString()}</span>
+                    <span>{formatViewCount(movie.viewCount)}</span>
                   </div>
                 </>
               )}

@@ -30,6 +30,8 @@ model Movie {
   streamingUrls StreamingUrl[]
   views        MovieView[]
   featuredContent FeaturedContent?
+  seasons      Season[]  // For TV shows only
+  heroSection  HeroSection?
 
   @@map("movies")
 }
@@ -126,6 +128,7 @@ model User {
 
   userLists UserList[]
   views     MovieView[]
+  episodeViews EpisodeView[]
 
   @@map("users")
 }
@@ -141,6 +144,91 @@ model FeaturedContent {
   movie     Movie    @relation(fields: [movieId], references: [id], onDelete: Cascade)
 
   @@map("featured_content")
+}
+
+model Season {
+  id          String @id @default(uuid())
+  movieId     String // TV Show ID
+  seasonNumber Int
+  title       String? // e.g., "Season 1" or "Season 2: The Return"
+  overview    String?
+  posterUrl   String?
+  episodeCount Int @default(0)
+  airDate     DateTime?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  movie       Movie @relation(fields: [movieId], references: [id], onDelete: Cascade)
+  episodes    Episode[]
+
+  @@unique([movieId, seasonNumber])
+  @@map("seasons")
+}
+
+model Episode {
+  id            String @id @default(uuid())
+  seasonId      String
+  episodeNumber Int
+  title         String
+  overview      String?
+  durationMin   Int
+  rating        Float?
+  airDate       DateTime?
+  stillUrl      String? // Episode thumbnail/still image
+  viewCount     Int @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  season        Season @relation(fields: [seasonId], references: [id], onDelete: Cascade)
+  streamingUrls EpisodeStreamingUrl[]
+  views         EpisodeView[]
+
+  @@unique([seasonId, episodeNumber])
+  @@map("episodes")
+}
+
+model EpisodeStreamingUrl {
+  id          String @id @default(uuid())
+  episodeId   String
+  url         String
+  quality     String? // e.g., "1080p", "720p", "4K"
+  platform    String? // e.g., "Netflix", "Xflix", "Direct"
+  isActive    Boolean @default(true)
+  createdAt   DateTime @default(now())
+
+  episode     Episode @relation(fields: [episodeId], references: [id], onDelete: Cascade)
+
+  @@map("episode_streaming_urls")
+}
+
+model EpisodeView {
+  id        String   @id @default(uuid())
+  episodeId String
+  userId    String?  // Optional - for anonymous views
+  ipAddress String?  // Track anonymous views by IP
+  userAgent String?  // Track user agent for analytics
+  viewedAt  DateTime @default(now())
+
+  episode   Episode  @relation(fields: [episodeId], references: [id], onDelete: Cascade)
+  user      User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([episodeId, userId, ipAddress], name: "unique_episode_view")
+  @@map("episode_views")
+}
+
+model HeroSection {
+  id        String   @id @default(uuid())
+  movieId   String   @unique
+  sequence  Int      @unique
+  isActive  Boolean  @default(true)
+  title     String?  // Custom hero title (optional)
+  subtitle  String?  // Custom hero subtitle (optional)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  movie     Movie    @relation(fields: [movieId], references: [id], onDelete: Cascade)
+
+  @@map("hero_sections")
 }
 
 enum MediaType {

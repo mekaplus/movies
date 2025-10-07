@@ -23,14 +23,10 @@ export default function BackOfficeDashboard() {
   const router = useRouter()
 
   useEffect(() => {
-    const token = localStorage.getItem("admin-token")
-    if (!token) {
-      router.push("/back-office")
-      return
-    }
-
+    // Authentication is handled by middleware
+    // No need to check for token here
     fetchDashboardStats()
-  }, [router])
+  }, [])
 
   const fetchDashboardStats = async () => {
     try {
@@ -46,11 +42,19 @@ export default function BackOfficeDashboard() {
     }
   }
 
-  const handleLogout = () => {
-    localStorage.removeItem("admin-token")
-    // Clear the cookie as well
-    document.cookie = "admin-token=; path=/; max-age=0"
-    router.push("/back-office")
+  const handleLogout = async () => {
+    try {
+      // Call logout API to clear httpOnly cookie
+      await fetch("/api/back-office/auth/logout", {
+        method: "POST"
+      })
+      // Redirect to login page
+      window.location.href = "/back-office"
+    } catch (error) {
+      console.error("Logout failed:", error)
+      // Force redirect even if logout API fails
+      window.location.href = "/back-office"
+    }
   }
 
   const statsCards = [

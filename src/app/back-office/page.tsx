@@ -27,10 +27,9 @@ export default function BackOfficeLogin() {
 
       if (response.ok) {
         const data = await response.json()
-        localStorage.setItem("admin-token", data.token)
-        // Also set the token as a cookie for server-side middleware
-        document.cookie = `admin-token=${data.token}; path=/; max-age=86400` // 24 hours
-        router.push("/back-office/dashboard")
+        // Cookie is set by the server in the response
+        // Use window.location to ensure cookie is sent with next request
+        window.location.href = "/back-office/dashboard"
       } else {
         const errorData = await response.json()
         setError(errorData.message || "Invalid credentials")
@@ -74,7 +73,7 @@ export default function BackOfficeLogin() {
               onChange={(e) => setEmail(e.target.value)}
               required
               className="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-xflix-red focus:border-transparent text-sm"
-              placeholder="admin@xflix.xyz"
+              placeholder="your.email@example.com"
             />
           </div>
 
@@ -89,24 +88,26 @@ export default function BackOfficeLogin() {
               onChange={(e) => setPassword(e.target.value)}
               required
               className="w-full bg-gray-800 border border-gray-700 rounded-md px-4 py-2 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-xflix-red focus:border-transparent text-sm"
-              placeholder="••••••••"
+              placeholder="Enter your password"
             />
           </div>
 
           <Button
             type="submit"
             disabled={loading}
-            className="w-full bg-xflix-red hover:bg-red-700 text-white font-medium py-2 px-4 rounded-md transition-colors disabled:opacity-50 text-sm"
+            className="w-full bg-xflix-red hover:bg-red-700 text-white font-medium py-2 px-4 rounded-md transition-colors disabled:opacity-50 disabled:cursor-not-allowed text-sm"
           >
-            {loading ? "Signing in..." : "Sign In"}
+            {loading ? (
+              <div className="flex items-center justify-center">
+                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Signing in...
+              </div>
+            ) : "Sign In"}
           </Button>
         </form>
-
-        <div className="mt-4 text-center">
-          <p className="text-gray-500 text-xs">
-            Demo: admin@xflix.xyz / admin123
-          </p>
-        </div>
       </div>
     </div>
   )

@@ -1,19 +1,66 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
+import { jwtVerify } from 'jose'
 
-export function middleware(request: NextRequest) {
-  // Check if the request is for a back-office route (except login)
-  if (request.nextUrl.pathname.startsWith('/back-office') &&
-      !request.nextUrl.pathname.startsWith('/back-office/login') &&
-      request.nextUrl.pathname !== '/back-office') {
+export async function middleware(request: NextRequest) {
+  const isBackOfficeRoute = request.nextUrl.pathname.startsWith('/back-office')
+  const isBackOfficeAPI = request.nextUrl.pathname.startsWith('/api/back-office')
+  const isLoginRoute = request.nextUrl.pathname === '/back-office' ||
+                       request.nextUrl.pathname.startsWith('/api/back-office/auth/')
 
-    // In a real application, you would validate the JWT token here
-    // For now, we'll just check if there's an authorization header
-    const token = request.headers.get('authorization') || request.cookies.get('admin-token')?.value
+  // Check if the request is for a protected back-office route or API
+  if ((isBackOfficeRoute || isBackOfficeAPI) && !isLoginRoute) {
+    const token = request.cookies.get('__xf_sess')?.value
+
+    console.log('Middleware - Path:', request.nextUrl.pathname)
+    console.log('Middleware - Token present:', !!token)
 
     if (!token) {
-      // Redirect to login if no token is present
+      console.log('Middleware - No token')
+
+      // For API routes, return 401 Unauthorized
+      if (isBackOfficeAPI) {
+        return NextResponse.json(
+          { message: "Unauthorized" },
+          { status: 401 }
+        )
+      }
+
+      // For page routes, redirect to login
       return NextResponse.redirect(new URL('/back-office', request.url))
+    }
+
+    try {
+      // Verify JWT token using jose (Edge runtime compatible)
+      const secret = new TextEncoder().encode(process.env.JWT_SECRET || '')
+      const { payload } = await jwtVerify(token, secret)
+
+      console.log('Middleware - Token valid for:', payload.email)
+
+      // Token is valid, allow the request to proceed
+      const response = NextResponse.next()
+
+      // Attach admin info to headers for use in API routes
+      response.headers.set('x-admin-id', payload.adminId as string)
+      response.headers.set('x-admin-email', payload.email as string)
+
+      return response
+    } catch (error) {
+      // Invalid or expired token
+      console.log('Middleware - Token invalid:', error)
+
+      // For API routes, return 401 Unauthorized
+      if (isBackOfficeAPI) {
+        return NextResponse.json(
+          { message: "Unauthorized - Invalid or expired token" },
+          { status: 401 }
+        )
+      }
+
+      // For page routes, redirect to login and clear cookie
+      const response = NextResponse.redirect(new URL('/back-office', request.url))
+      response.cookies.delete('__xf_sess')
+      return response
     }
   }
 
@@ -22,6 +69,7 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/back-office/:path*'
+    '/back-office/:path*',
+    '/api/back-office/:path*'
   ]
 }

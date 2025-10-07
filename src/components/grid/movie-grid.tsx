@@ -5,6 +5,7 @@ import Image from "next/image"
 import { Play, Eye } from "@/components/common/icons"
 import { Movie } from "@/lib/types"
 import { formatYear } from "@/lib/utils"
+import { formatViewCount } from "@/lib/utils/format-number"
 
 interface MovieGridProps {
   movies: Movie[]
@@ -65,7 +66,7 @@ export function MovieGrid({ movies }: MovieGridProps) {
                   <span className="movie-grid-separator">•</span>
                   <div className="movie-grid-views">
                     <Eye className="movie-grid-eye-icon" />
-                    <span>{movie.viewCount.toLocaleString()}</span>
+                    <span>{formatViewCount(movie.viewCount)}</span>
                   </div>
                 </>
               )}

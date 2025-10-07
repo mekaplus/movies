@@ -20,7 +20,9 @@ model Movie {
   type        MediaType
   posterUrl   String?
   backdropUrl String?
+  trailerUrl  String?
   viewCount   Int @default(0)
+  isWarCollection Boolean @default(false)
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
 
@@ -31,6 +33,7 @@ model Movie {
   views        MovieView[]
   featuredContent FeaturedContent?
   heroSection  HeroSection?
+  seasons      Season[]
 
   @@map("movies")
 }
@@ -131,6 +134,17 @@ model User {
   @@map("users")
 }
 
+model Admin {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  password  String   // Hashed password
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("admins")
+}
+
 model FeaturedContent {
   id        String   @id @default(uuid())
   movieId   String   @unique
@@ -159,6 +173,60 @@ model HeroSection {
   @@map("hero_sections")
 }
 
+model Season {
+  id           String   @id @default(uuid())
+  movieId      String
+  seasonNumber Int
+  title        String?
+  overview     String?
+  posterUrl    String?
+  episodeCount Int      @default(0)
+  airDate      DateTime?
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  movie        Movie    @relation(fields: [movieId], references: [id], onDelete: Cascade)
+  episodes     Episode[]
+
+  @@unique([movieId, seasonNumber])
+  @@map("seasons")
+}
+
+model Episode {
+  id            String   @id @default(uuid())
+  seasonId      String
+  episodeNumber Int
+  title         String
+  overview      String?
+  durationMin   Int
+  rating        Float?
+  airDate       DateTime?
+  stillUrl      String?
+  viewCount     Int      @default(0)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  season        Season   @relation(fields: [seasonId], references: [id], onDelete: Cascade)
+  streamingUrls EpisodeStreamingUrl[]
+
+  @@unique([seasonId, episodeNumber])
+  @@map("episodes")
+}
+
+model EpisodeStreamingUrl {
+  id        String   @id @default(uuid())
+  episodeId String
+  url       String
+  quality   String?  // e.g., "1080p", "720p", "4K"
+  platform  String?  // e.g., "Netflix", "Xflix", "Direct"
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+
+  episode   Episode  @relation(fields: [episodeId], references: [id], onDelete: Cascade)
+
+  @@map("episode_streaming_urls")
+}
+
 enum MediaType {
   MOVIE
   TV_SHOW
@@ -167,4 +235,5 @@ enum MediaType {
 enum CreditRole {
   ACTOR
   DIRECTOR
+  WRITER
 }
