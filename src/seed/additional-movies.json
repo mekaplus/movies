@@ -1,0 +1,842 @@
+[
+  {
+    "id": "movie_31",
+    "title": "Blade Runner 2049",
+    "overview": "Thirty years after the events of the first film, a new blade runner, LAPD Officer K discovers a long-buried secret that has the potential to plunge what's left of society into chaos.",
+    "year": 2017,
+    "durationMin": 164,
+    "rating": 8.0,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gajva2L0rPYkEWjzgFlBXCAVBE5.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/ilKyLKrdc1S9dflwfQ1JnfcyS9f.jpg",
+    "genres": ["science-fiction", "thriller", "drama"],
+    "credits": [
+      {
+        "name": "Denis Villeneuve",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Ryan Gosling",
+        "role": "ACTOR",
+        "character": "Officer K"
+      },
+      {
+        "name": "Harrison Ford",
+        "role": "ACTOR",
+        "character": "Rick Deckard"
+      }
+    ]
+  },
+  {
+    "id": "movie_32",
+    "title": "Mad Max: Fury Road",
+    "overview": "An apocalyptic story set in the furthest reaches of our planet, in a stark desert landscape where humanity is broken, and most everyone is crazed fighting for the necessities of life.",
+    "year": 2015,
+    "durationMin": 120,
+    "rating": 8.1,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/hA2ple9q4qnwxp3hKVNhroipsir.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/tbhdm8UJAb4ViCTsulYFL3lxMCd.jpg",
+    "genres": ["action", "adventure", "science-fiction"],
+    "credits": [
+      {
+        "name": "George Miller",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Tom Hardy",
+        "role": "ACTOR",
+        "character": "Max Rockatansky"
+      },
+      {
+        "name": "Charlize Theron",
+        "role": "ACTOR",
+        "character": "Furiosa"
+      }
+    ]
+  },
+  {
+    "id": "movie_33",
+    "title": "The Grand Budapest Hotel",
+    "overview": "The adventures of Gustave H, a legendary concierge at a famous European hotel between the wars, and Zero Moustafa, the lobby boy who becomes his most trusted friend.",
+    "year": 2014,
+    "durationMin": 99,
+    "rating": 8.1,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/eWdyYQreja6JGCzqHWXpWHDrrPo.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/rKoKUAYVuBdTURG5lzNrLJdRuNJ.jpg",
+    "genres": ["comedy", "drama", "adventure"],
+    "credits": [
+      {
+        "name": "Wes Anderson",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Ralph Fiennes",
+        "role": "ACTOR",
+        "character": "M. Gustave"
+      },
+      {
+        "name": "F. Murray Abraham",
+        "role": "ACTOR",
+        "character": "Mr. Moustafa"
+      }
+    ]
+  },
+  {
+    "id": "movie_34",
+    "title": "Parasite",
+    "overview": "All unemployed, Ki-taek's family takes peculiar interest in the wealthy and glamorous Parks for their livelihood until they get entangled in an unexpected incident.",
+    "year": 2019,
+    "durationMin": 132,
+    "rating": 8.6,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7IiTTgloJzvGI1TAYymCfbfl3vT.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/TU9NIjwzjoKPwQHoHshkBcQZzjP.jpg",
+    "genres": ["thriller", "drama", "comedy"],
+    "credits": [
+      {
+        "name": "Bong Joon-ho",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Song Kang-ho",
+        "role": "ACTOR",
+        "character": "Ki-taek"
+      },
+      {
+        "name": "Lee Sun-kyun",
+        "role": "ACTOR",
+        "character": "Dong-ik"
+      }
+    ]
+  },
+  {
+    "id": "movie_35",
+    "title": "1917",
+    "overview": "At the height of the First World War, two British soldiers are given a seemingly impossible mission.",
+    "year": 2019,
+    "durationMin": 119,
+    "rating": 8.3,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/iZf0KyrE25z1sage4SYFLCCrMi9.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/3uG3aOhEzFCjcQulsJQiAzLSrLl.jpg",
+    "genres": ["war", "drama", "action"],
+    "credits": [
+      {
+        "name": "Sam Mendes",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "George MacKay",
+        "role": "ACTOR",
+        "character": "Lance Corporal Blake"
+      },
+      {
+        "name": "Dean-Charles Chapman",
+        "role": "ACTOR",
+        "character": "Lance Corporal Schofield"
+      }
+    ]
+  },
+  {
+    "id": "movie_36",
+    "title": "Once Upon a Time in Hollywood",
+    "overview": "A faded television actor and his stunt double strive to achieve fame and success in the film industry during the final years of Hollywood's Golden Age in 1969 Los Angeles.",
+    "year": 2019,
+    "durationMin": 161,
+    "rating": 7.6,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/8j58iEBw9pOXFD2L0nt0ZXeHviB.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/3XURyBEt7k6kVsGWQpQKh6Huu8K.jpg",
+    "genres": ["drama", "comedy", "crime"],
+    "credits": [
+      {
+        "name": "Quentin Tarantino",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Leonardo DiCaprio",
+        "role": "ACTOR",
+        "character": "Rick Dalton"
+      },
+      {
+        "name": "Brad Pitt",
+        "role": "ACTOR",
+        "character": "Cliff Booth"
+      }
+    ]
+  },
+  {
+    "id": "movie_37",
+    "title": "Knives Out",
+    "overview": "A detective investigates the death of a patriarch of an eccentric, combative family.",
+    "year": 2019,
+    "durationMin": 130,
+    "rating": 7.9,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pThyQovXQrw2m0s9x82twj48Jq4.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/2u7zbn8EudG6kLlBzUYqP8RyFU4.jpg",
+    "genres": ["crime", "comedy", "mystery"],
+    "credits": [
+      {
+        "name": "Rian Johnson",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Daniel Craig",
+        "role": "ACTOR",
+        "character": "Benoit Blanc"
+      },
+      {
+        "name": "Chris Evans",
+        "role": "ACTOR",
+        "character": "Ransom Drysdale"
+      }
+    ]
+  },
+  {
+    "id": "movie_38",
+    "title": "Ford v Ferrari",
+    "overview": "American car designer Carroll Shelby and driver Ken Miles battle corporate interference and the laws of physics to build a revolutionary race car for Ford in order to defeat Ferrari at the 24 Hours of Le Mans in 1966.",
+    "year": 2019,
+    "durationMin": 152,
+    "rating": 8.1,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/dR1Ju50iudrOh3YgfwkAU1g2HZe.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/6ApDtO7xaWAfPqfi2IARXIzj8QS.jpg",
+    "genres": ["action", "drama", "biography"],
+    "credits": [
+      {
+        "name": "James Mangold",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Matt Damon",
+        "role": "ACTOR",
+        "character": "Carroll Shelby"
+      },
+      {
+        "name": "Christian Bale",
+        "role": "ACTOR",
+        "character": "Ken Miles"
+      }
+    ]
+  },
+  {
+    "id": "movie_39",
+    "title": "Jojo Rabbit",
+    "overview": "A young boy in Hitler's army finds out his mother is hiding a Jewish girl in their home.",
+    "year": 2019,
+    "durationMin": 108,
+    "rating": 7.9,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7GsM4mtM0worCtIVeiQt28HieeN.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/VlHt27nCqOuTnuX6bku8QZapzO.jpg",
+    "genres": ["comedy", "drama", "war"],
+    "credits": [
+      {
+        "name": "Taika Waititi",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Roman Griffin Davis",
+        "role": "ACTOR",
+        "character": "Johannes 'Jojo' Betzler"
+      },
+      {
+        "name": "Thomasin McKenzie",
+        "role": "ACTOR",
+        "character": "Elsa Korr"
+      }
+    ]
+  },
+  {
+    "id": "movie_40",
+    "title": "The Shape of Water",
+    "overview": "At a top secret research facility in the 1960s, a lonely janitor forms a unique relationship with an amphibious creature that is being held in captivity.",
+    "year": 2017,
+    "durationMin": 123,
+    "rating": 7.3,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/k4FwHlMhuRR5BISY2Gm2QZHlH5Q.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/5AQ2FS84KGf5v2TP8f3phk88fqm.jpg",
+    "genres": ["drama", "fantasy", "romance"],
+    "credits": [
+      {
+        "name": "Guillermo del Toro",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Sally Hawkins",
+        "role": "ACTOR",
+        "character": "Elisa"
+      },
+      {
+        "name": "Michael Shannon",
+        "role": "ACTOR",
+        "character": "Richard Strickland"
+      }
+    ]
+  },
+  {
+    "id": "movie_41",
+    "title": "La La Land",
+    "overview": "While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations for the future.",
+    "year": 2016,
+    "durationMin": 128,
+    "rating": 8.0,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/uDO8zWDhfWwoFdKS4fzkUJt0Rf0.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/ylXCdC106IKiarftHkcacasaAcb.jpg",
+    "genres": ["romance", "drama", "music"],
+    "credits": [
+      {
+        "name": "Damien Chazelle",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Ryan Gosling",
+        "role": "ACTOR",
+        "character": "Sebastian"
+      },
+      {
+        "name": "Emma Stone",
+        "role": "ACTOR",
+        "character": "Mia"
+      }
+    ]
+  },
+  {
+    "id": "movie_42",
+    "title": "Moonlight",
+    "overview": "A young African-American man grapples with his identity and sexuality while experiencing the everyday struggles of childhood, adolescence, and burgeoning adulthood.",
+    "year": 2016,
+    "durationMin": 111,
+    "rating": 7.4,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/4911T5FbJ9eD2Faz5Z8cT3SUhU.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/ddrZZr6bAnOIH9MZGfmNJqgO0LQ.jpg",
+    "genres": ["drama", "romance"],
+    "credits": [
+      {
+        "name": "Barry Jenkins",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Mahershala Ali",
+        "role": "ACTOR",
+        "character": "Juan"
+      },
+      {
+        "name": "Naomie Harris",
+        "role": "ACTOR",
+        "character": "Paula"
+      }
+    ]
+  },
+  {
+    "id": "movie_43",
+    "title": "Spotlight",
+    "overview": "The true story of how the Boston Globe uncovered the massive scandal of child molestation and cover-up within the local Catholic Archdiocese.",
+    "year": 2015,
+    "durationMin": 129,
+    "rating": 8.1,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gWkgMnIsd8Od7iyhEEKL5G4Qq6J.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/wkq8c39xBR5iNVS3L7Br34EK4Oe.jpg",
+    "genres": ["drama", "crime", "history"],
+    "credits": [
+      {
+        "name": "Tom McCarthy",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Mark Ruffalo",
+        "role": "ACTOR",
+        "character": "Michael Rezendes"
+      },
+      {
+        "name": "Michael Keaton",
+        "role": "ACTOR",
+        "character": "Walter 'Robby' Robinson"
+      }
+    ]
+  },
+  {
+    "id": "movie_44",
+    "title": "Birdman",
+    "overview": "A washed-up superhero actor attempts to revive his fading career by writing, directing, and starring in a Broadway production.",
+    "year": 2014,
+    "durationMin": 119,
+    "rating": 7.7,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/rSZs93P0LLxqlVEbI001UKoeCQC.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/bmcEJmEBlVjCMPcZ5nJa6yOqjQm.jpg",
+    "genres": ["drama", "comedy"],
+    "credits": [
+      {
+        "name": "Alejandro G. Iñárritu",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Michael Keaton",
+        "role": "ACTOR",
+        "character": "Riggan Thomson"
+      },
+      {
+        "name": "Emma Stone",
+        "role": "ACTOR",
+        "character": "Sam Thomson"
+      }
+    ]
+  },
+  {
+    "id": "movie_45",
+    "title": "Her",
+    "overview": "In a near future, a lonely writer develops an unlikely relationship with an operating system designed to meet his every need.",
+    "year": 2013,
+    "durationMin": 126,
+    "rating": 8.0,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/lEIaL12hSkqqe83kgADkbUqEnvk.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/kIXYgcaYJzl8aAF4IVdPH2LK8W3.jpg",
+    "genres": ["romance", "science-fiction", "drama"],
+    "credits": [
+      {
+        "name": "Spike Jonze",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Joaquin Phoenix",
+        "role": "ACTOR",
+        "character": "Theodore Twombly"
+      },
+      {
+        "name": "Scarlett Johansson",
+        "role": "ACTOR",
+        "character": "Samantha (voice)"
+      }
+    ]
+  },
+  {
+    "id": "movie_46",
+    "title": "12 Years a Slave",
+    "overview": "In the antebellum United States, Solomon Northup, a free black man from upstate New York, is abducted and sold into slavery.",
+    "year": 2013,
+    "durationMin": 134,
+    "rating": 8.1,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/xdANQijuNrJaw1HA61rDccME4Tm.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/ceCHHI2k1YD3EvAvIByVTL7uTDQ.jpg",
+    "genres": ["drama", "history", "biography"],
+    "credits": [
+      {
+        "name": "Steve McQueen",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Chiwetel Ejiofor",
+        "role": "ACTOR",
+        "character": "Solomon Northup"
+      },
+      {
+        "name": "Michael Fassbender",
+        "role": "ACTOR",
+        "character": "Edwin Epps"
+      }
+    ]
+  },
+  {
+    "id": "movie_47",
+    "title": "Gravity",
+    "overview": "Two astronauts work together to survive after an accident leaves them stranded in space.",
+    "year": 2013,
+    "durationMin": 91,
+    "rating": 7.7,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/4x9HrGRoI2TJXhvEL8hL0yB7yl0.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/s3TBrRGB1iav7gFOCNx3H31MoES.jpg",
+    "genres": ["science-fiction", "thriller", "drama"],
+    "credits": [
+      {
+        "name": "Alfonso Cuarón",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Sandra Bullock",
+        "role": "ACTOR",
+        "character": "Ryan Stone"
+      },
+      {
+        "name": "George Clooney",
+        "role": "ACTOR",
+        "character": "Matt Kowalski"
+      }
+    ]
+  },
+  {
+    "id": "movie_48",
+    "title": "Django Unchained",
+    "overview": "With the help of a German bounty hunter, a freed slave sets out to rescue his wife from a brutal Mississippi plantation owner.",
+    "year": 2012,
+    "durationMin": 165,
+    "rating": 8.4,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/7oWY8VDWW7thTzWh3OKYRkWUlD5.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/2oZklIzUbvZXXzIFzv7Hi68d6xf.jpg",
+    "genres": ["western", "drama", "action"],
+    "credits": [
+      {
+        "name": "Quentin Tarantino",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Jamie Foxx",
+        "role": "ACTOR",
+        "character": "Django"
+      },
+      {
+        "name": "Christoph Waltz",
+        "role": "ACTOR",
+        "character": "Dr. King Schultz"
+      }
+    ]
+  },
+  {
+    "id": "movie_49",
+    "title": "Life of Pi",
+    "overview": "A young man who survives a disaster at sea is hurtled into an epic journey of adventure and discovery.",
+    "year": 2012,
+    "durationMin": 127,
+    "rating": 7.9,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/j5Mj8GVh4I4SDsALi3vggafOwXX.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/6ky2lWkEu3IHQpMhHqIlgvdNRtn.jpg",
+    "genres": ["adventure", "drama", "family"],
+    "credits": [
+      {
+        "name": "Ang Lee",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Suraj Sharma",
+        "role": "ACTOR",
+        "character": "Pi Patel"
+      },
+      {
+        "name": "Irrfan Khan",
+        "role": "ACTOR",
+        "character": "Adult Pi Patel"
+      }
+    ]
+  },
+  {
+    "id": "movie_50",
+    "title": "Argo",
+    "overview": "Acting under the cover of a Hollywood producer scouting a location for a science fiction film, a CIA agent launches a dangerous operation to rescue six Americans in Tehran.",
+    "year": 2012,
+    "durationMin": 120,
+    "rating": 7.7,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/m5gPWFZFIp4UJFABgWyLkbXv8GX.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/jnJkEBGzYMfIvlcfvDwV9HnxpO9.jpg",
+    "genres": ["drama", "thriller", "history"],
+    "credits": [
+      {
+        "name": "Ben Affleck",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Ben Affleck",
+        "role": "ACTOR",
+        "character": "Tony Mendez"
+      },
+      {
+        "name": "Bryan Cranston",
+        "role": "ACTOR",
+        "character": "Jack O'Donnell"
+      }
+    ]
+  },
+  {
+    "id": "movie_51",
+    "title": "The Artist",
+    "overview": "A silent movie star meets a young dancer, but the arrival of talking pictures sends their careers in opposite directions.",
+    "year": 2011,
+    "durationMin": 100,
+    "rating": 7.9,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/hN3ruJqITJXGNO4gIJ8i4YBJCqy.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/3jNiqFJJOyyMXTgm8zrj0Yvd0qs.jpg",
+    "genres": ["drama", "comedy", "romance"],
+    "credits": [
+      {
+        "name": "Michel Hazanavicius",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Jean Dujardin",
+        "role": "ACTOR",
+        "character": "George Valentin"
+      },
+      {
+        "name": "Bérénice Bejo",
+        "role": "ACTOR",
+        "character": "Peppy Miller"
+      }
+    ]
+  },
+  {
+    "id": "movie_52",
+    "title": "The King's Speech",
+    "overview": "The story of King George VI, his impromptu ascension to the throne and the speech therapist who helped the unsure monarch overcome his stammer.",
+    "year": 2010,
+    "durationMin": 118,
+    "rating": 8.0,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/kqmLOiYJzrfHP3UU8d8gahfVJX.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/fPNsQ7TP0IKS3MVGKS9Y9N5IHr0.jpg",
+    "genres": ["drama", "history", "biography"],
+    "credits": [
+      {
+        "name": "Tom Hooper",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Colin Firth",
+        "role": "ACTOR",
+        "character": "King George VI"
+      },
+      {
+        "name": "Geoffrey Rush",
+        "role": "ACTOR",
+        "character": "Lionel Logue"
+      }
+    ]
+  },
+  {
+    "id": "movie_53",
+    "title": "Inception",
+    "overview": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",
+    "year": 2010,
+    "durationMin": 148,
+    "rating": 8.8,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9gk7adHYeDvHkCSEqAvQNLV5Uge.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/s3TBrRGB1iav7gFOCNx3H31MoES.jpg",
+    "genres": ["action", "science-fiction", "thriller"],
+    "credits": [
+      {
+        "name": "Christopher Nolan",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Leonardo DiCaprio",
+        "role": "ACTOR",
+        "character": "Dom Cobb"
+      },
+      {
+        "name": "Marion Cotillard",
+        "role": "ACTOR",
+        "character": "Mal"
+      }
+    ]
+  },
+  {
+    "id": "movie_54",
+    "title": "The Hurt Locker",
+    "overview": "During the Iraq War, a Sergeant recently assigned to an army bomb squad is put at odds with his squad mates due to his maverick way of handling his work.",
+    "year": 2008,
+    "durationMin": 127,
+    "rating": 7.5,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/tMH2Z5wNu4lmfeFhYVV9LqOqvzs.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/kFPlNPNKtbBLiM3w1yrZgPVoE0V.jpg",
+    "genres": ["war", "drama", "thriller"],
+    "credits": [
+      {
+        "name": "Kathryn Bigelow",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Jeremy Renner",
+        "role": "ACTOR",
+        "character": "Sergeant First Class William James"
+      },
+      {
+        "name": "Anthony Mackie",
+        "role": "ACTOR",
+        "character": "Sergeant JT Sanborn"
+      }
+    ]
+  },
+  {
+    "id": "movie_55",
+    "title": "No Country for Old Men",
+    "overview": "Violence and mayhem ensue after a hunter stumbles upon a drug deal gone wrong and more than two million dollars in cash near the Rio Grande.",
+    "year": 2007,
+    "durationMin": 122,
+    "rating": 8.1,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/bj1v6YKF8yHqA489VFfnQvpW3DY.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/6rPlgOmeVrHhxSpgkRdFj3YVEJf.jpg",
+    "genres": ["crime", "drama", "thriller"],
+    "credits": [
+      {
+        "name": "Joel Coen",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Tommy Lee Jones",
+        "role": "ACTOR",
+        "character": "Sheriff Ed Tom Bell"
+      },
+      {
+        "name": "Javier Bardem",
+        "role": "ACTOR",
+        "character": "Anton Chigurh"
+      }
+    ]
+  },
+  {
+    "id": "movie_56",
+    "title": "The Departed",
+    "overview": "An undercover cop and a police informant play a cat and mouse game with each other as they attempt to find out the other's identity while being pressured by the Boston mob.",
+    "year": 2006,
+    "durationMin": 151,
+    "rating": 8.5,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nT97ifVT2J1yMQmeq20Qblg61T.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/tGLO9zw5ZtCeyyEWgbYGgsFxC6i.jpg",
+    "genres": ["crime", "drama", "thriller"],
+    "credits": [
+      {
+        "name": "Martin Scorsese",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Leonardo DiCaprio",
+        "role": "ACTOR",
+        "character": "Billy Costigan"
+      },
+      {
+        "name": "Matt Damon",
+        "role": "ACTOR",
+        "character": "Colin Sullivan"
+      }
+    ]
+  },
+  {
+    "id": "movie_57",
+    "title": "Crash",
+    "overview": "Los Angeles citizens with vastly separate lives collide in interweaving stories of race, loss and redemption.",
+    "year": 2004,
+    "durationMin": 112,
+    "rating": 7.7,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/86BdPC6RDX88NC880pLidKn2LCj.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/bApg5VN17S0ClQPgA1pZ1yGQhCB.jpg",
+    "genres": ["drama", "crime"],
+    "credits": [
+      {
+        "name": "Paul Haggis",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Sandra Bullock",
+        "role": "ACTOR",
+        "character": "Jean Cabot"
+      },
+      {
+        "name": "Don Cheadle",
+        "role": "ACTOR",
+        "character": "Graham Waters"
+      }
+    ]
+  },
+  {
+    "id": "movie_58",
+    "title": "Million Dollar Baby",
+    "overview": "A hardened trainer takes on a determined woman in his boxing gym.",
+    "year": 2004,
+    "durationMin": 132,
+    "rating": 8.1,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/2np5raLWF4IYTlktARi4SCG3hSk.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/L7kVeOlOHEoTQ9JtSZoJgkRpbM.jpg",
+    "genres": ["drama", "sport"],
+    "credits": [
+      {
+        "name": "Clint Eastwood",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Hilary Swank",
+        "role": "ACTOR",
+        "character": "Maggie Fitzgerald"
+      },
+      {
+        "name": "Clint Eastwood",
+        "role": "ACTOR",
+        "character": "Frankie Dunn"
+      }
+    ]
+  },
+  {
+    "id": "movie_59",
+    "title": "Lost in Translation",
+    "overview": "A faded movie star and a neglected young woman form an unlikely bond after crossing paths in Tokyo.",
+    "year": 2003,
+    "durationMin": 102,
+    "rating": 7.7,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/wuFdlWalmUDkazLDrJavjOxBzd.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/nP8ZlGpOr4kTBJzgLBBH6AhyKKL.jpg",
+    "genres": ["drama", "comedy", "romance"],
+    "credits": [
+      {
+        "name": "Sofia Coppola",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Bill Murray",
+        "role": "ACTOR",
+        "character": "Bob Harris"
+      },
+      {
+        "name": "Scarlett Johansson",
+        "role": "ACTOR",
+        "character": "Charlotte"
+      }
+    ]
+  },
+  {
+    "id": "movie_60",
+    "title": "Chicago",
+    "overview": "Murderesses Velma Kelly and Roxie Hart find themselves on death row together and fight for the fame that will keep them from the gallows in 1920s Chicago.",
+    "year": 2002,
+    "durationMin": 113,
+    "rating": 7.2,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/v1Sg3GuHDz9uhrKqYozOeCMLSpj.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/tchqeUpFzKGtGGJX5Lm2bQ3PqxF.jpg",
+    "genres": ["crime", "drama", "music"],
+    "credits": [
+      {
+        "name": "Rob Marshall",
+        "role": "DIRECTOR"
+      },
+      {
+        "name": "Renée Zellweger",
+        "role": "ACTOR",
+        "character": "Roxie Hart"
+      },
+      {
+        "name": "Catherine Zeta-Jones",
+        "role": "ACTOR",
+        "character": "Velma Kelly"
+      }
+    ]
+  }
+]

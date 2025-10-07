@@ -1,95 +1,61 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { HeroCarousel } from "@/components/hero/hero-carousel"
+import { FeaturedGrid } from "@/components/featured/featured-grid"
+import { ContentSection } from "@/components/sections/content-section"
+import { Navbar } from "@/components/navbar/navbar"
+import {
+  getFeaturedMovie,
+  getTrendingMovies,
+  getTopRatedMovies,
+  getMoviesByGenre,
+  getAllMovies,
+  getHeroSectionMovies,
+  getFeaturedContentMovies,
+  getMostViewedMovies,
+  getRecentlyAddedMovies
+} from "@/lib/repos/movie-repo"
 
-export default function Home() {
+export default async function Home() {
+  const [
+    featuredMovie,
+    heroMovies,
+    featuredMovies,
+    recentlyAddedMovies,
+    trendingMovies,
+    topRatedMovies,
+    mostViewedMovies,
+    actionMovies,
+    comedyMovies,
+    dramaMovies
+  ] = await Promise.all([
+    getFeaturedMovie(),
+    getHeroSectionMovies(),
+    getFeaturedContentMovies(),
+    getRecentlyAddedMovies(),
+    getTrendingMovies(),
+    getTopRatedMovies(),
+    getMostViewedMovies(),
+    getMoviesByGenre("action"),
+    getMoviesByGenre("comedy"),
+    getMoviesByGenre("drama")
+  ])
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <Navbar />
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      <HeroCarousel movies={heroMovies} />
+
+      <div className="content-container">
+        <FeaturedGrid title="Featured Content" movies={featuredMovies} />
+
+        <ContentSection title="Recently Added" movies={recentlyAddedMovies} count={recentlyAddedMovies.length} viewAllHref="/recently-added" />
+        <ContentSection title="Trending Now" movies={trendingMovies} count={trendingMovies.length} viewAllHref="/trending" />
+        <ContentSection title="Top Rated" movies={topRatedMovies} count={topRatedMovies.length} viewAllHref="/top-rated" />
+        <ContentSection title="Most Viewed" movies={mostViewedMovies} count={mostViewedMovies.length} viewAllHref="/most-viewed" />
+        <ContentSection title="Action Movies" movies={actionMovies} count={actionMovies.length} viewAllHref="/genre/action" />
+        <ContentSection title="Comedy Movies" movies={comedyMovies} count={comedyMovies.length} viewAllHref="/genre/comedy" />
+        <ContentSection title="Drama Movies" movies={dramaMovies} count={dramaMovies.length} viewAllHref="/genre/drama" />
+      </div>
+    </>
+  )
 }

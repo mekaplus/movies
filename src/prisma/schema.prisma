@@ -1,0 +1,154 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Movie {
+  id          String @id @default(uuid())
+  title       String
+  overview    String
+  year        Int
+  durationMin Int
+  rating      Float
+  type        MediaType
+  posterUrl   String?
+  backdropUrl String?
+  viewCount   Int @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  genres       MovieGenre[]
+  credits      Credit[]
+  userLists    UserList[]
+  streamingUrls StreamingUrl[]
+  views        MovieView[]
+  featuredContent FeaturedContent?
+
+  @@map("movies")
+}
+
+model Genre {
+  id     String @id @default(uuid())
+  name   String @unique
+  movies MovieGenre[]
+
+  @@map("genres")
+}
+
+model MovieGenre {
+  id      String @id @default(uuid())
+  movieId String
+  genreId String
+  movie   Movie  @relation(fields: [movieId], references: [id], onDelete: Cascade)
+  genre   Genre  @relation(fields: [genreId], references: [id], onDelete: Cascade)
+
+  @@unique([movieId, genreId])
+  @@map("movie_genres")
+}
+
+model Person {
+  id         String @id @default(uuid())
+  name       String
+  profileUrl String?
+  credits    Credit[]
+
+  @@map("people")
+}
+
+model Credit {
+  id        String     @id @default(uuid())
+  movieId   String
+  personId  String
+  role      CreditRole
+  character String?
+
+  movie     Movie      @relation(fields: [movieId], references: [id], onDelete: Cascade)
+  person    Person     @relation(fields: [personId], references: [id], onDelete: Cascade)
+
+  @@map("credits")
+}
+
+model StreamingUrl {
+  id          String @id @default(uuid())
+  movieId     String
+  url         String
+  quality     String? // e.g., "1080p", "720p", "4K"
+  platform    String? // e.g., "Netflix", "Xflix", "Direct"
+  isActive    Boolean @default(true)
+  createdAt   DateTime @default(now())
+
+  movie       Movie @relation(fields: [movieId], references: [id], onDelete: Cascade)
+
+  @@map("streaming_urls")
+}
+
+model UserList {
+  id        String   @id @default(uuid())
+  userId    String
+  movieId   String
+  createdAt DateTime @default(now())
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  movie     Movie    @relation(fields: [movieId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, movieId])
+  @@map("user_lists")
+}
+
+model MovieView {
+  id        String   @id @default(uuid())
+  movieId   String
+  userId    String?  // Optional - for anonymous views
+  ipAddress String?  // Track anonymous views by IP
+  userAgent String?  // Track user agent for analytics
+  viewedAt  DateTime @default(now())
+
+  movie     Movie    @relation(fields: [movieId], references: [id], onDelete: Cascade)
+  user      User?    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([movieId, userId, ipAddress], name: "unique_view")
+  @@map("movie_views")
+}
+
+model User {
+  id        String     @id @default(uuid())
+  email     String     @unique
+  name      String?
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  userLists UserList[]
+  views     MovieView[]
+
+  @@map("users")
+}
+
+model FeaturedContent {
+  id        String   @id @default(uuid())
+  movieId   String   @unique
+  sequence  Int      @unique
+  isActive  Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  movie     Movie    @relation(fields: [movieId], references: [id], onDelete: Cascade)
+
+  @@map("featured_content")
+}
+
+enum MediaType {
+  MOVIE
+  TV_SHOW
+}
+
+enum CreditRole {
+  ACTOR
+  DIRECTOR
+}

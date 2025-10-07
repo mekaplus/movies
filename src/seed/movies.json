@@ -1,0 +1,739 @@
+[
+  {
+    "title": "Inception",
+    "overview": "Dom Cobb is a skilled thief, the absolute best in the dangerous art of extraction, stealing valuable secrets from deep within the subconscious during the dream state, when the mind is at its most vulnerable.",
+    "year": 2010,
+    "durationMin": 148,
+    "rating": 8.8,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qmDpIHrmpJINaRKAfWQfftjCdyi.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/s3TBrRGB1iav7gFOCNx3H31MoES.jpg",
+    "genreNames": ["Action", "Science Fiction", "Adventure"],
+    "credits": [
+      {
+        "personName": "Christopher Nolan",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Leonardo DiCaprio",
+        "role": "ACTOR",
+        "character": "Dom Cobb"
+      },
+      {
+        "personName": "Marion Cotillard",
+        "role": "ACTOR",
+        "character": "Mal"
+      },
+      {
+        "personName": "Tom Hardy",
+        "role": "ACTOR",
+        "character": "Eames"
+      },
+      {
+        "personName": "Elliot Page",
+        "role": "ACTOR",
+        "character": "Ariadne"
+      }
+    ]
+  },
+  {
+    "title": "Breaking Bad",
+    "overview": "When Walter White, a New Mexico chemistry teacher, is diagnosed with Stage III cancer and given a prognosis of only two years left to live, he becomes filled with a sense of fearlessness and an unrelenting desire to secure his family's financial future at any cost.",
+    "year": 2008,
+    "durationMin": 45,
+    "rating": 9.5,
+    "type": "TV_SHOW",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ggFHVNu6YYI5L9pCfOacjizRGt.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/tsRy63Mu5cu8etL1X7ZLyf7UP1M.jpg",
+    "genreNames": ["Crime", "Drama", "Thriller"],
+    "credits": [
+      {
+        "personName": "Vince Gilligan",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Bryan Cranston",
+        "role": "ACTOR",
+        "character": "Walter White"
+      },
+      {
+        "personName": "Aaron Paul",
+        "role": "ACTOR",
+        "character": "Jesse Pinkman"
+      },
+      {
+        "personName": "Anna Gunn",
+        "role": "ACTOR",
+        "character": "Skyler White"
+      }
+    ]
+  },
+  {
+    "title": "The Shawshank Redemption",
+    "overview": "Framed in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden.",
+    "year": 1994,
+    "durationMin": 142,
+    "rating": 9.3,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/q6y0Go1tsGEsmtFryDOJo3dEmqu.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/iNh3BivHyg5sQRPP1KOkzguEX0H.jpg",
+    "genreNames": ["Drama", "Crime"],
+    "credits": [
+      {
+        "personName": "Frank Darabont",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Tim Robbins",
+        "role": "ACTOR",
+        "character": "Andy Dufresne"
+      },
+      {
+        "personName": "Morgan Freeman",
+        "role": "ACTOR",
+        "character": "Ellis Boyd 'Red' Redding"
+      }
+    ]
+  },
+  {
+    "title": "The Godfather",
+    "overview": "Spanning the years 1945 to 1955, a chronicle of the fictional Italian-American Corleone crime family. When organized crime family patriarch, Vito Corleone barely survives an attempt on his life, his youngest son, Michael steps in to take care of the would-be killers, launching a campaign of bloody revenge.",
+    "year": 1972,
+    "durationMin": 175,
+    "rating": 9.2,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/tmU7GeKVybMWFButWEGl2M4GeiP.jpg",
+    "genreNames": ["Drama", "Crime"],
+    "credits": [
+      {
+        "personName": "Francis Ford Coppola",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Marlon Brando",
+        "role": "ACTOR",
+        "character": "Don Vito Corleone"
+      },
+      {
+        "personName": "Al Pacino",
+        "role": "ACTOR",
+        "character": "Michael Corleone"
+      }
+    ]
+  },
+  {
+    "title": "The Dark Knight",
+    "overview": "Batman raises the stakes in his war on crime. With the help of Lt. Jim Gordon and District Attorney Harvey Dent, Batman sets out to dismantle the remaining criminal organizations that plague the streets.",
+    "year": 2008,
+    "durationMin": 152,
+    "rating": 9.0,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/hqkIcbrOHL86UncnHIsHVcVmzue.jpg",
+    "genreNames": ["Action", "Crime", "Drama"],
+    "credits": [
+      {
+        "personName": "Christopher Nolan",
+        "role": "DIRECTOR",
+        "character": null
+      }
+    ]
+  },
+  {
+    "title": "Pulp Fiction",
+    "overview": "A burger-loving hit man, his philosophical partner, a drug-addled gangster's moll and a washed-up boxer converge in this sprawling, comedic crime caper.",
+    "year": 1994,
+    "durationMin": 154,
+    "rating": 8.9,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/d5iIlFn5s0ImszYzBPb8JPIfbXD.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/4cDFJr4HnXN5AdPw4AKrmLlMWdO.jpg",
+    "genreNames": ["Crime", "Drama"],
+    "credits": []
+  },
+  {
+    "title": "Forrest Gump",
+    "overview": "A man with a low IQ has accomplished great things in his life and been present during significant historic events—in each case, far exceeding what anyone imagined he could do.",
+    "year": 1994,
+    "durationMin": 142,
+    "rating": 8.8,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/arw2vcBveWOVZr6pxd9XTd1TdQa.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/xu9zaAevzQ5nnrsXN6JcahLnG4i.jpg",
+    "genreNames": ["Comedy", "Drama", "Romance"],
+    "credits": []
+  },
+  {
+    "title": "Fight Club",
+    "overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy.",
+    "year": 1999,
+    "durationMin": 139,
+    "rating": 8.8,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/hZkgoQYus5vegHoetLkCJzb17zJ.jpg",
+    "genreNames": ["Drama"],
+    "credits": []
+  },
+  {
+    "title": "The Matrix",
+    "overview": "Set in the 22nd century, The Matrix tells the story of a computer hacker who joins a group of underground insurgents fighting the vast and powerful computers who now rule the earth.",
+    "year": 1999,
+    "durationMin": 136,
+    "rating": 8.7,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/f89U3ADr1oiB1s9GkdPOEpXUk5H.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/icmmSD4vTTDKOq2vvdulafOGw93.jpg",
+    "genreNames": ["Action", "Science Fiction"],
+    "credits": []
+  },
+  {
+    "title": "Goodfellas",
+    "overview": "The true story of Henry Hill, a half-Irish, half-Sicilian Brooklyn kid who is adopted by neighbourhood gangsters at an early age and climbs the ranks of a Mafia family under the guidance of Jimmy Conway.",
+    "year": 1990,
+    "durationMin": 145,
+    "rating": 8.7,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/aKuFiU82s5ISJpGZp7YkIr3kCUd.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/sw7mordbZxgITU877yTpZCud90M.jpg",
+    "genreNames": ["Crime", "Drama"],
+    "credits": []
+  },
+  {
+    "title": "Avatar",
+    "overview": "In the 22nd century, a paraplegic Marine is dispatched to the moon Pandora on a unique mission, but becomes torn between following orders and protecting an alien civilization.",
+    "year": 2009,
+    "durationMin": 162,
+    "rating": 7.8,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/6EiRUJpuoeQPghrs3YNktfnqOVh.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/o0s4XsEDfDlvit5pDRKjzXR4pp2.jpg",
+    "genreNames": ["Action", "Adventure", "Science Fiction"],
+    "credits": [
+      {
+        "personName": "James Cameron",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Sam Worthington",
+        "role": "ACTOR",
+        "character": "Jake Sully"
+      },
+      {
+        "personName": "Zoe Saldana",
+        "role": "ACTOR",
+        "character": "Neytiri"
+      }
+    ]
+  },
+  {
+    "title": "Titanic",
+    "overview": "101-year-old Rose DeWitt Bukater tells the story of her life aboard the Titanic, 84 years later. A young Rose boards the ship with her mother and fiancé.",
+    "year": 1997,
+    "durationMin": 194,
+    "rating": 7.9,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/9xjZS2rlVxm8SFx8kPC3aIGCOYQ.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/yDI6D5ZQh67YU4r2ms8qcSbAviZ.jpg",
+    "genreNames": ["Drama", "Romance"],
+    "credits": [
+      {
+        "personName": "James Cameron",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Leonardo DiCaprio",
+        "role": "ACTOR",
+        "character": "Jack Dawson"
+      },
+      {
+        "personName": "Kate Winslet",
+        "role": "ACTOR",
+        "character": "Rose DeWitt Bukater"
+      }
+    ]
+  },
+  {
+    "title": "The Lord of the Rings: The Return of the King",
+    "overview": "Aragorn is revealed as the heir to the ancient kings as he, Gandalf and the other members of the broken fellowship struggle to save Gondor from Sauron's forces.",
+    "year": 2003,
+    "durationMin": 201,
+    "rating": 8.9,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/rCzpDGLbOoPwLjy3OAm5NUPOTrC.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/2u7zbn8EudG6kLlBzUYqP8RyFU4.jpg",
+    "genreNames": ["Adventure", "Fantasy", "Action"],
+    "credits": [
+      {
+        "personName": "Peter Jackson",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Elijah Wood",
+        "role": "ACTOR",
+        "character": "Frodo Baggins"
+      },
+      {
+        "personName": "Viggo Mortensen",
+        "role": "ACTOR",
+        "character": "Aragorn"
+      }
+    ]
+  },
+  {
+    "title": "Interstellar",
+    "overview": "The adventures of a group of explorers who make use of a newly discovered wormhole to surpass the limitations on human space travel and conquer the vast distances of an interstellar voyage.",
+    "year": 2014,
+    "durationMin": 169,
+    "rating": 8.6,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/xJHokMbljvjADYdit5fK5VQsXEG.jpg",
+    "genreNames": ["Adventure", "Drama", "Science Fiction"],
+    "credits": [
+      {
+        "personName": "Christopher Nolan",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Matthew McConaughey",
+        "role": "ACTOR",
+        "character": "Cooper"
+      },
+      {
+        "personName": "Anne Hathaway",
+        "role": "ACTOR",
+        "character": "Brand"
+      }
+    ]
+  },
+  {
+    "title": "The Lion King",
+    "overview": "A young lion prince is cast out of his pride by his cruel uncle, who claims he killed his father so that he can become the new king.",
+    "year": 1994,
+    "durationMin": 88,
+    "rating": 8.5,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/sKCr78MXSLixwmZ8DyJLrpMsd15.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/hKGNkp3l6qMOhv0s7J3Zo1fNFLb.jpg",
+    "genreNames": ["Family", "Animation", "Drama"],
+    "credits": [
+      {
+        "personName": "Roger Allers",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Rob Minkoff",
+        "role": "DIRECTOR",
+        "character": null
+      }
+    ]
+  },
+  {
+    "title": "The Avengers",
+    "overview": "When an unexpected enemy emerges and threatens global safety and security, Nick Fury, director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team.",
+    "year": 2012,
+    "durationMin": 143,
+    "rating": 8.0,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/RYMX2wcKCBAr24UyPD7xwmjaTn.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/9BBTo63ANSmhC4e6r62OJFuK2GL.jpg",
+    "genreNames": ["Action", "Adventure", "Science Fiction"],
+    "credits": [
+      {
+        "personName": "Joss Whedon",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Robert Downey Jr.",
+        "role": "ACTOR",
+        "character": "Tony Stark / Iron Man"
+      },
+      {
+        "personName": "Chris Evans",
+        "role": "ACTOR",
+        "character": "Steve Rogers / Captain America"
+      }
+    ]
+  },
+  {
+    "title": "Jurassic Park",
+    "overview": "A wealthy entrepreneur secretly creates a theme park featuring living dinosaurs drawn from prehistoric DNA. Before opening day, he invites a team of experts and his two eager grandchildren to experience the park and help calm anxious investors.",
+    "year": 1993,
+    "durationMin": 127,
+    "rating": 8.1,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/b1xCNnyrPebIc7EWNZIa6BYzUhU.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/9i3plLl89DHMz7mahksDaAo7HIS.jpg",
+    "genreNames": ["Adventure", "Science Fiction", "Thriller"],
+    "credits": [
+      {
+        "personName": "Steven Spielberg",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Sam Neill",
+        "role": "ACTOR",
+        "character": "Dr. Alan Grant"
+      },
+      {
+        "personName": "Laura Dern",
+        "role": "ACTOR",
+        "character": "Dr. Ellie Sattler"
+      }
+    ]
+  },
+  {
+    "title": "Star Wars",
+    "overview": "Princess Leia is captured and held hostage by the evil Imperial forces in their effort to take over the galactic Empire. Venturesome Luke Skywalker and dashing captain Han Solo team together with the loveable robot duo R2-D2 and C-3PO to rescue the beautiful princess and restore peace and justice in the Empire.",
+    "year": 1977,
+    "durationMin": 121,
+    "rating": 8.6,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/4iJfYYoQzZcONB9hNzg0J0wWyPH.jpg",
+    "genreNames": ["Adventure", "Action", "Science Fiction"],
+    "credits": [
+      {
+        "personName": "George Lucas",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Mark Hamill",
+        "role": "ACTOR",
+        "character": "Luke Skywalker"
+      },
+      {
+        "personName": "Harrison Ford",
+        "role": "ACTOR",
+        "character": "Han Solo"
+      }
+    ]
+  },
+  {
+    "title": "E.T. the Extra-Terrestrial",
+    "overview": "An alien is left behind on Earth and saved by the 10-year-old Elliot who decides to keep him hidden in his home. While a task force hunts for the extra-terrestrial, Elliot, his brother, and his little sister Gertie form an emotional bond with their new friend.",
+    "year": 1982,
+    "durationMin": 115,
+    "rating": 7.9,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/5Jgfj6NahKKRyXZO27Hx8j1odLI.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/uOvVa1Hkk7P0rJvuH7LqYIFlj4K.jpg",
+    "genreNames": ["Science Fiction", "Adventure", "Family"],
+    "credits": [
+      {
+        "personName": "Steven Spielberg",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Henry Thomas",
+        "role": "ACTOR",
+        "character": "Elliott"
+      },
+      {
+        "personName": "Drew Barrymore",
+        "role": "ACTOR",
+        "character": "Gertie"
+      }
+    ]
+  },
+  {
+    "title": "The Silence of the Lambs",
+    "overview": "Clarice Starling is a top student at the FBI's training academy. Jack Crawford wants Clarice to interview Dr. Hannibal Lecter, a brilliant psychiatrist who is also a violent psychopath, serving life behind bars for various acts of murder and cannibalism.",
+    "year": 1991,
+    "durationMin": 118,
+    "rating": 8.6,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/uS9m8OBk1A8eM9I042bx8XXpqAq.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/q3Ea2oNV8jZYbC4bUvXKrHl0Ly.jpg",
+    "genreNames": ["Crime", "Drama", "Thriller"],
+    "credits": [
+      {
+        "personName": "Jonathan Demme",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Jodie Foster",
+        "role": "ACTOR",
+        "character": "Clarice Starling"
+      },
+      {
+        "personName": "Anthony Hopkins",
+        "role": "ACTOR",
+        "character": "Dr. Hannibal Lecter"
+      }
+    ]
+  },
+  {
+    "title": "Gladiator",
+    "overview": "In the year 180 A.D. Germanic tribes are about to launch a war against Rome. Maximus is a general in the Roman army. In the midst of the Germanic wars, the emperor Marcus Aurelius dies and is succeeded by his son Commodus.",
+    "year": 2000,
+    "durationMin": 155,
+    "rating": 8.5,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/ty8TGRuvJLPUmAR1H1nRIsgwvim.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/s2bT29y0ngXxxu2IA8AOzzXTRhd.jpg",
+    "genreNames": ["Action", "Drama", "Adventure"],
+    "credits": [
+      {
+        "personName": "Ridley Scott",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Russell Crowe",
+        "role": "ACTOR",
+        "character": "Maximus Decimus Meridius"
+      },
+      {
+        "personName": "Joaquin Phoenix",
+        "role": "ACTOR",
+        "character": "Commodus"
+      }
+    ]
+  },
+  {
+    "title": "The Departed",
+    "overview": "To take down South Boston's Irish Mafia, the police send in one of their own to infiltrate the underworld, not realizing the syndicate has done likewise.",
+    "year": 2006,
+    "durationMin": 151,
+    "rating": 8.5,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/nT97ifVT2J1yMQmeq20Qblg61T.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/8Od5zV9cH3EdeZHDbZIl7q4YlP8.jpg",
+    "genreNames": ["Drama", "Thriller", "Crime"],
+    "credits": [
+      {
+        "personName": "Martin Scorsese",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Leonardo DiCaprio",
+        "role": "ACTOR",
+        "character": "Billy Costigan"
+      },
+      {
+        "personName": "Matt Damon",
+        "role": "ACTOR",
+        "character": "Colin Sullivan"
+      }
+    ]
+  },
+  {
+    "title": "The Prestige",
+    "overview": "A mysterious story of two magicians whose intense rivalry leads them on a life-long battle for supremacy -- full of obsession, deceit and jealousy with dangerous and deadly consequences.",
+    "year": 2006,
+    "durationMin": 130,
+    "rating": 8.5,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/tRNlZbgNCNOpLpbPEz5L8G8A0JN.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/dMSMIcaA8pCzY4qNzSsK3NQEK5C.jpg",
+    "genreNames": ["Drama", "Mystery", "Thriller"],
+    "credits": [
+      {
+        "personName": "Christopher Nolan",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Hugh Jackman",
+        "role": "ACTOR",
+        "character": "Robert Angier"
+      },
+      {
+        "personName": "Christian Bale",
+        "role": "ACTOR",
+        "character": "Alfred Borden"
+      }
+    ]
+  },
+  {
+    "title": "Casablanca",
+    "overview": "In Casablanca, Morocco in December 1941, a cynical American expatriate meets a former lover, with unforeseen complications.",
+    "year": 1942,
+    "durationMin": 102,
+    "rating": 8.5,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/5K7cOHoay2mZusSLezBOY0Qxh8a.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/uuGqqGMf7j27mLjRLF00I7mIk4G.jpg",
+    "genreNames": ["Drama", "Romance"],
+    "credits": [
+      {
+        "personName": "Michael Curtiz",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Humphrey Bogart",
+        "role": "ACTOR",
+        "character": "Rick Blaine"
+      },
+      {
+        "personName": "Ingrid Bergman",
+        "role": "ACTOR",
+        "character": "Ilsa Lund"
+      }
+    ]
+  },
+  {
+    "title": "The Green Mile",
+    "overview": "A supernatural tale set on death row in a Southern prison, where gentle giant John Coffey possesses the mysterious power to heal people's ailments. When the lead guard, Paul Edgecombe, recognizes Coffey's miraculous gift, he tries desperately to help stave off the condemned man's execution.",
+    "year": 1999,
+    "durationMin": 189,
+    "rating": 8.6,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/velWPhVMQeQKcxggNEU8YmIo52R.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/Rq0BchI4kVZ6LWs36M5p8i4HyE.jpg",
+    "genreNames": ["Fantasy", "Drama", "Crime"],
+    "credits": [
+      {
+        "personName": "Frank Darabont",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Tom Hanks",
+        "role": "ACTOR",
+        "character": "Paul Edgecombe"
+      },
+      {
+        "personName": "Michael Clarke Duncan",
+        "role": "ACTOR",
+        "character": "John Coffey"
+      }
+    ]
+  },
+  {
+    "title": "Schindler's List",
+    "overview": "The true story of how businessman Oskar Schindler saved over a thousand Jewish lives from the Nazis while they worked as slaves in his factory during World War II.",
+    "year": 1993,
+    "durationMin": 195,
+    "rating": 8.9,
+    "type": "MOVIE",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/loRmRzQXZeqG78TqZuyvSlEQfZb.jpg",
+    "genreNames": ["Drama", "History", "War"],
+    "credits": [
+      {
+        "personName": "Steven Spielberg",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Liam Neeson",
+        "role": "ACTOR",
+        "character": "Oskar Schindler"
+      },
+      {
+        "personName": "Ben Kingsley",
+        "role": "ACTOR",
+        "character": "Itzhak Stern"
+      }
+    ]
+  },
+  {
+    "title": "Game of Thrones",
+    "overview": "Seven noble families fight for control of the mythical land of Westeros. Friction between the houses leads to full-scale war. All while a very ancient evil awakens in the farthest north. Amidst the war, a neglected military order of misfits, the Night's Watch, is all that stands between the realms of men and icy horrors beyond.",
+    "year": 2011,
+    "durationMin": 57,
+    "rating": 9.3,
+    "type": "TV_SHOW",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/u3bZgnGQ9T01sWNhyveQz0wH0Hl.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/mUkuc2wyV9dHLG0D0Loaw5pO2s8.jpg",
+    "genreNames": ["Sci-Fi & Fantasy", "Drama", "Action & Adventure"],
+    "credits": [
+      {
+        "personName": "David Benioff",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "D.B. Weiss",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Sean Bean",
+        "role": "ACTOR",
+        "character": "Ned Stark"
+      },
+      {
+        "personName": "Peter Dinklage",
+        "role": "ACTOR",
+        "character": "Tyrion Lannister"
+      }
+    ]
+  },
+  {
+    "title": "The Sopranos",
+    "overview": "The story of New Jersey-based Italian-American mobster Tony Soprano and the difficulties he faces as he tries to balance the conflicting requirements of his home life and the criminal organization he heads.",
+    "year": 1999,
+    "durationMin": 55,
+    "rating": 9.2,
+    "type": "TV_SHOW",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/57okJJUBK0AaijxLh3RjNUaMvFI.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/fNFFEhX3ssLiOqIYjzz9CjWKY7M.jpg",
+    "genreNames": ["Drama"],
+    "credits": [
+      {
+        "personName": "David Chase",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "James Gandolfini",
+        "role": "ACTOR",
+        "character": "Tony Soprano"
+      },
+      {
+        "personName": "Lorraine Bracco",
+        "role": "ACTOR",
+        "character": "Dr. Jennifer Melfi"
+      }
+    ]
+  },
+  {
+    "title": "Stranger Things",
+    "overview": "When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces, and one strange little girl.",
+    "year": 2016,
+    "durationMin": 51,
+    "rating": 8.7,
+    "type": "TV_SHOW",
+    "posterUrl": "https://image.tmdb.org/t/p/w500/49WJfeN0moxb9IPfGn8AIqMGskD.jpg",
+    "backdropUrl": "https://image.tmdb.org/t/p/w1920_and_h800_multi_faces/lXS60geme1LlEob5Wgvj3KilClA.jpg",
+    "genreNames": ["Sci-Fi & Fantasy", "Mystery", "Drama"],
+    "credits": [
+      {
+        "personName": "The Duffer Brothers",
+        "role": "DIRECTOR",
+        "character": null
+      },
+      {
+        "personName": "Winona Ryder",
+        "role": "ACTOR",
+        "character": "Joyce Byers"
+      },
+      {
+        "personName": "David Harbour",
+        "role": "ACTOR",
+        "character": "Jim Hopper"
+      }
+    ]
+  }
+]
