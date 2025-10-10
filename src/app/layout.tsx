@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ErrorBoundary } from "@/components/error/error-boundary";
-import { TelegramProvider } from "@/components/telegram/telegram-provider";
+import { ClientProviders } from "@/components/providers/client-providers";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -15,15 +14,18 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
-  viewport: {
+  themeColor: '#141414',
+};
+
+export function generateViewport() {
+  return {
     width: 'device-width',
     initialScale: 1,
     maximumScale: 1,
     userScalable: false,
     viewportFit: 'cover',
-  },
-  themeColor: '#141414',
-};
+  };
+}
 
 export default function RootLayout({
   children,
@@ -31,16 +33,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
         <script src="https://telegram.org/js/telegram-web-app.js" async></script>
       </head>
-      <body className={`${inter.variable} antialiased min-h-screen bg-xflix-dark`}>
-        <TelegramProvider>
-          <ErrorBoundary>
-            {children}
-          </ErrorBoundary>
-        </TelegramProvider>
+      <body className={`${inter.variable} antialiased min-h-screen bg-xflix-dark`} suppressHydrationWarning>
+        <ClientProviders>
+          {children}
+        </ClientProviders>
       </body>
     </html>
   );
