@@ -18,7 +18,7 @@
     "postinstall": "prisma generate",
     "install:all": "npm install && npm install tailwindcss autoprefixer postcss @prisma/client prisma zod lucide-react clsx tailwind-merge class-variance-authority @radix-ui/react-slot next-auth && npm install --save-dev prettier ts-node",
     "setup": "cp .env.example .env && npm run db:generate && npm run db:push && npm run seed",
-    "vercel-build": "prisma generate && prisma migrate deploy && next build"
+    "vercel-build": "next build"
   },
   "dependencies": {
     "@prisma/client": "^6.16.2",
