@@ -14,6 +14,10 @@ import {
   getRecentlyAddedMovies
 } from "@/lib/repos/movie-repo"
 
+// Force dynamic rendering - don't pre-render at build time
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 export default async function Home() {
   const [
     featuredMovie,

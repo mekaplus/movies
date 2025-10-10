@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   icons: {
     icon: '/favicon.ico',
   },
-  themeColor: '#141414',
 };
 
 export function generateViewport() {
@@ -24,6 +23,7 @@ export function generateViewport() {
     maximumScale: 1,
     userScalable: false,
     viewportFit: 'cover',
+    themeColor: '#141414',
   };
 }
 
