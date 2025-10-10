@@ -12,13 +12,19 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    domains: ['image.tmdb.org'],
+    domains: ['image.tmdb.org', 'm.media-amazon.com'],
     remotePatterns: [
       {
         protocol: 'https',
         hostname: 'image.tmdb.org',
         port: '',
         pathname: '/t/p/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'm.media-amazon.com',
+        port: '',
+        pathname: '/images/**',
       },
     ],
   },
