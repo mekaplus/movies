@@ -118,10 +118,15 @@ export default function CookiePreferences() {
               <div className="mt-4 pt-4 border-t border-gray-700">
                 <p className="text-sm text-gray-400 mb-2">Examples:</p>
                 <ul className="list-disc list-inside space-y-1 text-sm text-gray-500 ml-4">
-                  <li>Google Analytics</li>
+                  <li>Google Analytics (_ga, _gid, _gat)</li>
                   <li>Page view tracking</li>
                   <li>User behavior analysis</li>
+                  <li>Content interaction tracking</li>
+                  <li>Search query analysis</li>
                 </ul>
+                <p className="text-xs text-gray-500 mt-3">
+                  We use Google Analytics to collect anonymous data about how users interact with our website, including which movies and TV shows are most popular, search patterns, and navigation behavior. This helps us improve content recommendations and user experience.
+                </p>
               </div>
             </div>
 

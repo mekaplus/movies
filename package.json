@@ -21,6 +21,7 @@
     "vercel-build": "next build"
   },
   "dependencies": {
+    "@next/third-parties": "^15.5.4",
     "@prisma/client": "^6.16.2",
     "@radix-ui/react-slot": "^1.1.1",
     "autoprefixer": "^10.4.20",

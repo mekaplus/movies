@@ -4,12 +4,16 @@ import { Play, Info } from "@/components/common/icons"
 import { Button } from "@/components/common/button"
 import { Movie } from "@/lib/types"
 import { formatDuration, formatYear } from "@/lib/utils"
+import { trackHeroInteraction } from "@/lib/analytics"
+import { useRouter } from "next/navigation"
 
 interface HeroBannerProps {
   movie: Movie
+  position?: number
 }
 
-export function HeroBanner({ movie }: HeroBannerProps) {
+export function HeroBanner({ movie, position = 0 }: HeroBannerProps) {
+  const router = useRouter()
   return (
     <div className="xflix-hero">
       {/* Background Image */}
@@ -55,11 +59,33 @@ export function HeroBanner({ movie }: HeroBannerProps) {
 
           {/* Action Buttons */}
           <div className="xflix-hero-buttons">
-            <button className="xflix-play-btn">
+            <button
+              className="xflix-play-btn"
+              onClick={() => {
+                trackHeroInteraction({
+                  action: 'play',
+                  contentId: movie.id,
+                  contentTitle: movie.title,
+                  position,
+                })
+                router.push(`/title/${movie.id}`)
+              }}
+            >
               <Play className="xflix-play-icon" />
               <span>Play</span>
             </button>
-            <button className="xflix-info-btn">
+            <button
+              className="xflix-info-btn"
+              onClick={() => {
+                trackHeroInteraction({
+                  action: 'info',
+                  contentId: movie.id,
+                  contentTitle: movie.title,
+                  position,
+                })
+                router.push(`/title/${movie.id}`)
+              }}
+            >
               <Info className="xflix-info-icon" />
               <span>More Info</span>
             </button>

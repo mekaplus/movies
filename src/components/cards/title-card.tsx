@@ -8,19 +8,33 @@ import { Button } from "@/components/common/button"
 import { Movie } from "@/lib/types"
 import { formatDuration, formatYear, cn } from "@/lib/utils"
 import { formatViewCount } from "@/lib/utils/format-number"
+import { trackTitleCardClick } from "@/lib/analytics"
 
 interface TitleCardProps {
   movie: Movie
   priority?: boolean
+  position?: number
+  sectionTitle?: string
 }
 
-export function TitleCard({ movie, priority = false }: TitleCardProps) {
+export function TitleCard({ movie, priority = false, position, sectionTitle }: TitleCardProps) {
   const [isHovered, setIsHovered] = useState(false)
   const [isTouched, setIsTouched] = useState(false)
 
   const handleTouchStart = (e: React.TouchEvent) => {
     e.stopPropagation()
     setIsTouched(!isTouched)
+  }
+
+  const handleClick = () => {
+    // Track title card click
+    trackTitleCardClick({
+      contentId: movie.id,
+      contentTitle: movie.title,
+      contentType: movie.type === 'MOVIE' ? 'movie' : 'tv_show',
+      position,
+      sectionTitle,
+    })
   }
 
   const isExpanded = isHovered || isTouched
@@ -32,7 +46,7 @@ export function TitleCard({ movie, priority = false }: TitleCardProps) {
       onMouseLeave={() => setIsHovered(false)}
       onTouchStart={handleTouchStart}
     >
-      <Link href={`/title/${movie.id}`}>
+      <Link href={`/title/${movie.id}`} onClick={handleClick}>
         <div className="relative w-full overflow-hidden rounded-md bg-gray-800">
           {movie.posterUrl ? (
             <Image

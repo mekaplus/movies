@@ -13,6 +13,7 @@ import { ViewTracker } from "@/components/movie/view-tracker"
 import { SeasonsSection } from "@/components/tv/seasons-section"
 import { Movie, Episode } from "@/lib/types"
 import { formatDuration, formatYear } from "@/lib/utils"
+import { trackPlayerSelection, trackTrailerView, trackEpisodeSelection } from "@/lib/analytics"
 
 interface MovieDetailPageProps {
   params: Promise<{ id: string }>
@@ -109,11 +110,31 @@ export default function MovieDetailPage({ params }: MovieDetailPageProps) {
     if (episode.streamingUrls && episode.streamingUrls.length > 0) {
       setCurrentStreamUrl(episode.streamingUrls[0].url)
     }
+
+    // Track episode selection
+    if (movie) {
+      const season = movie.seasons?.find(s => s.id === episode.seasonId)
+      trackEpisodeSelection({
+        showId: movieId,
+        showTitle: movie.title,
+        episodeId: episode.id,
+        episodeTitle: episode.title,
+        seasonNumber: season?.seasonNumber || 1,
+        episodeNumber: episode.episodeNumber,
+      })
+    }
   }
 
   return (
     <div className="movie-detail">
-      <ViewTracker movieId={movieId} />
+      <ViewTracker
+        movieId={movieId}
+        movieTitle={movie.title}
+        contentType={movie.type === 'MOVIE' ? 'movie' : 'tv_show'}
+        genres={movie.genres.map(g => g.name)}
+        year={movie.year}
+        rating={movie.rating}
+      />
       <Navbar />
 
       {/* Hero Section */}
@@ -156,6 +177,12 @@ export default function MovieDetailPage({ params }: MovieDetailPageProps) {
               <Button
                 className="movie-detail-play-btn"
                 onClick={() => {
+                  // Track trailer view
+                  trackTrailerView({
+                    contentId: movieId,
+                    contentTitle: movie.title,
+                    contentType: movie.type === 'MOVIE' ? 'movie' : 'tv_show',
+                  })
                   window.open(movie.trailerUrl, '_blank', 'noopener,noreferrer')
                 }}
               >
@@ -176,6 +203,16 @@ export default function MovieDetailPage({ params }: MovieDetailPageProps) {
                   onClick={() => {
                     setCurrentStreamUrl(streamUrl.url)
                     setSelectedPlayerIndex(index)
+
+                    // Track player selection
+                    trackPlayerSelection({
+                      contentId: movieId,
+                      contentTitle: movie.title,
+                      contentType: 'movie',
+                      playerNumber: index + 1,
+                      quality: streamUrl.quality || undefined,
+                      platform: streamUrl.platform || undefined,
+                    })
                   }}
                 >
                   <Play />
@@ -196,6 +233,20 @@ export default function MovieDetailPage({ params }: MovieDetailPageProps) {
                   onClick={() => {
                     setCurrentStreamUrl(streamUrl.url)
                     setSelectedPlayerIndex(index)
+
+                    // Track player selection for TV show episodes
+                    const season = movie.seasons?.find(s => s.id === currentEpisode.seasonId)
+                    trackPlayerSelection({
+                      contentId: movieId,
+                      contentTitle: movie.title,
+                      contentType: 'tv_show',
+                      playerNumber: index + 1,
+                      quality: streamUrl.quality || undefined,
+                      platform: streamUrl.platform || undefined,
+                      episodeId: currentEpisode.id,
+                      seasonNumber: season?.seasonNumber,
+                      episodeNumber: currentEpisode.episodeNumber,
+                    })
                   }}
                 >
                   <Play />

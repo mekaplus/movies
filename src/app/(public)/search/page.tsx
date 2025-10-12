@@ -7,6 +7,7 @@ import { Search } from "@/components/common/icons"
 import { Navbar } from "@/components/navbar/navbar"
 import { MovieGrid } from "@/components/grid/movie-grid"
 import { Movie } from "@/lib/types"
+import { trackSearch } from "@/lib/analytics"
 
 function SearchContent() {
   const searchParams = useSearchParams()
@@ -29,6 +30,12 @@ function SearchContent() {
         if (response.ok) {
           const data = await response.json()
           setMovies(data)
+
+          // Track search with results count
+          trackSearch({
+            searchTerm: query,
+            resultsCount: data.length,
+          })
         }
       } catch (error) {
         console.error("Search failed:", error)

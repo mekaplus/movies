@@ -32,6 +32,21 @@ export default function PrivacyPolicy() {
             <p>
               We use cookies, web beacons, and similar tracking technologies to track activity on our service and store certain information. Cookies are files with a small amount of data that may include an anonymous unique identifier.
             </p>
+
+            <h3 className="text-xl font-semibold text-white mb-3 mt-4">2.3 Analytics Information</h3>
+            <p className="mb-3">
+              We use Google Analytics to understand how visitors interact with our website. Google Analytics collects information such as:
+            </p>
+            <ul className="list-disc list-inside space-y-2 ml-4">
+              <li>Pages visited and features used</li>
+              <li>Time spent on pages</li>
+              <li>Click patterns and navigation paths</li>
+              <li>Search queries and content interactions</li>
+              <li>Device and browser information</li>
+            </ul>
+            <p className="mt-3">
+              This information is collected anonymously and used to improve our service. You can opt-out of Google Analytics by installing the Google Analytics Opt-out Browser Add-on.
+            </p>
           </section>
 
           <section>
